@@ -1,0 +1,18 @@
+{
+  "name": "צוות המגדלור: לומדים אותיות",
+  "short_name": "צוות המגדלור",
+  "description": "משחק ללימוד אותיות בעברית לגילאי 3 עד 6.",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#2FA9C8",
+  "theme_color": "#2FA9C8",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

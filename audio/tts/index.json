@@ -1,0 +1,2240 @@
+{
+ "hello": {
+  "hash": "997ffe8a5006",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "שָׁלוֹם! אֲנִי קַפְּטֵן אוֹרִי, מִן הַמִּגְדַּלּוֹר.",
+  "heard": "שלום, אני קפטן אורי מן המגדלור.",
+  "match": 1.0
+ },
+ "hello2": {
+  "hash": "a2fa8c5ed729",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "בּוֹאוּ נִלְמַד אוֹתִיּוֹת עִם צֶוֶת הַחִלּוּץ!",
+  "heard": "בואו נלמד אותיות עם צוות החילוץ.",
+  "match": 0.96
+ },
+ "who": {
+  "hash": "a581dfa77df0",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "מִי מְשַׂחֵק עַכְשָׁו?",
+  "heard": "מי משחק עכשיו?",
+  "match": 0.95
+ },
+ "welcomeTeam": {
+  "hash": "ae6bcb758e21",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "בְּרוּכִים הַבָּאִים לַצֶּוֶת!",
+  "heard": "ברוכים הבאים לצוות.",
+  "match": 0.97
+ },
+ "chooseOk": {
+  "hash": "63f5c638840e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "רוֹצִים אֶת הַכְּלַבְלַב הַזֶּה? לַחֲצוּ עַל הַכַּפְתּוֹר הַיָּרֹק.",
+  "heard": "רוצים את הכלבלב הזה? לחצו על הכפתור הירוק.",
+  "match": 0.98
+ },
+ "choose": {
+  "hash": "e95e1d54e317",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "בַּחֲרוּ כְּלַבְלַב לַצֶּוֶת. לַחֲצוּ עַל כְּלַבְלַב כְּדֵי לְהַכִּיר אוֹתוֹ.",
+  "heard": "בחרו כלבלב לצוות. לחצו על כלבלב כדי להכיר אותו.",
+  "match": 0.99
+ },
+ "locked": {
+  "hash": "afe3ae074c27",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "עוֹד לֹא. קֹדֶם הַתַּחֲנָה שֶׁקּוֹפֶצֶת.",
+  "heard": "עוד לא, קודם התחנה שקופצת.",
+  "match": 0.97
+ },
+ "map": {
+  "hash": "49c0fe31e60a",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לְאָן נוֹסְעִים? לַחֲצוּ עַל הַתַּחֲנָה שֶׁקּוֹפֶצֶת.",
+  "heard": "לנוסעים, לחצו על התחנה שקופצת.",
+  "match": 0.96
+ },
+ "allDone": {
+  "hash": "05f3cf1ea91f",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הִצַּלְתֶּם אֶת כֹּל הָאוֹתִיּוֹת בַּמִּפְרָץ! אַתֶּם צֶוֶת מַדְהִים!",
+  "heard": "תצלצל מת כל האותיות במפרץ. אתם צוות מדהים!",
+  "match": 0.86
+ },
+ "badges": {
+  "hash": "039ceb25d629",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵלֶּה הַתָּגִים שֶׁאֲסַפְתֶּם. לַחֲצוּ עַל תָּג כְּדֵי לִשְׁמֹעַ.",
+  "heard": "אלה התגים שאספתם, לחצו על תג כדי לשמוע.",
+  "match": 0.98
+ },
+ "go": {
+  "hash": "175e14541f5b",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "יוֹצְאִים לַמְּשִׂימָה!",
+  "heard": "Yatımlım sima.",
+  "match": 0.0
+ },
+ "badgesEmpty": {
+  "hash": "caf65f4e5e70",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "עוֹד אֵין תָּגִים. כֹּל אוֹת שֶׁנַּצִּיל תִּהְיֶה תָּג!",
+  "heard": "Adénteggím, kolocsn a cíltéíetág.",
+  "match": 0.0
+ },
+ "look": {
+  "hash": "4311dd00420e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הִסְתַּכְּלוּ, הָאוֹת קוֹפֶצֶת!",
+  "heard": "הסתכלו, האות קופצת!",
+  "match": 1.0
+ },
+ "newLetters": {
+  "hash": "aedf4eb6a8e3",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הִנֵּה הָאוֹתִיּוֹת שֶׁל הַמְּשִׂימָה.",
+  "heard": "הנה האותיות של המשימה.",
+  "match": 1.0
+ },
+ "done": {
+  "hash": "6429a2fbc4c0",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הַמְּשִׂימָה הֻשְׁלְמָה! כֹּל הַכָּבוֹד, צֶוֶת!",
+  "heard": "המשימה הושלמה. כל הכבוד, צוות!",
+  "match": 0.95
+ },
+ "catchIntro": {
+  "hash": "822d70c9aadf",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "וְעַכְשָׁו, הַהַצָּלָה הַגְּדוֹלָה!",
+  "heard": "ועכשיו, ההצלה הגדולה.",
+  "match": 0.97
+ },
+ "backToMap": {
+  "hash": "4b38a61c8b35",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הַמַּפָּה, וְנִסַּע לַתַּחֲנָה הַבָּאָה.",
+  "heard": "לחצו על המפה, וניסע לתחנה הבאה.",
+  "match": 0.98
+ },
+ "finalNote": {
+  "hash": "0a5f9a7ddbf4",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אוֹת סוֹפִית בָּאָה רַק בְּסוֹף הַמִּלָּה.",
+  "heard": "אות סופית באה רק בסוף המילה.",
+  "match": 0.98
+ },
+ "praise.1": {
+  "hash": "95b6f920a676",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "כֹּל הַכָּבוֹד!",
+  "heard": "כל הכבוד.",
+  "match": 1.0
+ },
+ "praise.2": {
+  "hash": "940deac43ad7",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "מְצֻיָּן!",
+  "heard": "Me tsuyan.",
+  "match": 0.0
+ },
+ "voiceTest": {
+  "hash": "b65260fee3ea",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "שָׁלוֹם! כָּךְ נִשְׁמָע הַקּוֹל שֶׁל הַמִּשְׂחָק.",
+  "heard": "שלום. כך נשמע הכבול של המשחק.",
+  "match": 0.93
+ },
+ "praise.3": {
+  "hash": "c563a5a14a37",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "יוֹפִי!",
+  "heard": "Jofi",
+  "match": 0.0
+ },
+ "story.bridge": {
+  "hash": "a189abf5e61e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אוֹי, לֹא! רוּחַ חֲזָקָה הֵפִּילָה אֶת הָאוֹתִיּוֹת מִן הַגֶּשֶׁר לַמַּיִם. בּוֹאוּ נַצִּיל אוֹתָן!",
+  "heard": "אוי! לא! רוח חזקה הפילה את האותיות מן הגשר למים, בואו נציל אותן!",
+  "match": 1.0
+ },
+ "praise.6": {
+  "hash": "2196168d3711",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיזֶה יֹפִי!",
+  "heard": "Eize yofi!",
+  "match": 0.0
+ },
+ "praise.5": {
+  "hash": "7965acb60a2d",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אַלּוּפִים!",
+  "heard": "אלופים.",
+  "match": 1.0
+ },
+ "praise.4": {
+  "hash": "c3571a149b54",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "נָכוֹן מְאוֹד!",
+  "heard": "נכון מאוד.",
+  "match": 1.0
+ },
+ "story.harbor": {
+  "hash": "4b1d811cc1a1",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "בַּנָּמָל נָפְלוּ אַרְגְּזֵי הָאוֹתִיּוֹת מִן הָאֳנִיָּה. בּוֹאוּ נַחְזִיר אוֹתָם!",
+  "heard": "בנמל נפלו ארגזי האותיות מן האוניה, בואו נחזיר אותם.",
+  "match": 0.99
+ },
+ "story.beach": {
+  "hash": "248805efad4f",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הַגַּלִּים כִּסּוּ אֶת הָאוֹתִיּוֹת בַּחוֹל. בּוֹאוּ נִמְצָא אוֹתָן בֵּין הַצְּדָפִים!",
+  "heard": "הגלים כיסו את האותיות בחול, בואו נמצא אותן בין הצדפים.",
+  "match": 0.99
+ },
+ "story.forest": {
+  "hash": "cb10e13ae6d3",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹתִיּוֹת נִתְקְעוּ לְמַעְלָה, עַל הָעֵצִים בַּיַּעַר. בּוֹאוּ נוֹרִיד אוֹתָן!",
+  "heard": "האותיות נתקעו למעלה. על העצים ביער, בואו נוריד אותן.",
+  "match": 1.0
+ },
+ "story.farm": {
+  "hash": "b5f35cd27ee3",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "בַּחַוָּה, הָאוֹתִיּוֹת הִתְחַבְּאוּ בֵּין הַבֵּיצִים. בּוֹאוּ נִמְצָא אוֹתָן!",
+  "heard": "בחרוע, האותיות התחבאו בין הביצים. בואו נמצא אותן!",
+  "match": 0.96
+ },
+ "name.alef": {
+  "hash": "e8c997823090",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת אָלֶף!"
+ },
+ "story.hill": {
+  "hash": "fa25ec38d2b1",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָרוּחַ עַל הַגִּבְעָה הֵעִיפָה אֶת הָאוֹתִיּוֹת עִם הַבָּלוֹנִים. בּוֹאוּ נִתְפֹּס אוֹתָן!",
+  "heard": "הרוח על הגבעה העיפה את האותיות עם הבלונים. בואו נתפוס אותן!",
+  "match": 0.99
+ },
+ "story.reef": {
+  "hash": "ee1774c6459f",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הַדָּגִים בַּשּׁוּנִית שָׂחוּ עִם הָאוֹתִיּוֹת. בּוֹאוּ נַחְזִיר אוֹתָן!",
+  "heard": "הדאגים בשונית שכחו עם האותיות, בואו נחזיר אותן.",
+  "match": 0.97
+ },
+ "intro.alef": {
+  "hash": "f9b2adee34c2",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת אָלֶף.",
+  "heard": "זו האות א.",
+  "match": 0.88
+ },
+ "find.alef": {
+  "hash": "3ed3d0181da9",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת אָלֶף?",
+  "heard": "איפה האות א?",
+  "match": 0.9
+ },
+ "story.island": {
+  "hash": "9ed2270056d1",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "בָּאִי הַקָּטָן יֵשׁ אוֹתִיּוֹת מְיֻחָדוֹת: אוֹתִיּוֹת סוֹפִיּוֹת. בּוֹאוּ נַכִּיר אוֹתָן!",
+  "heard": "בעי הקטנה יש אותיות מיוחדות. אותיות סופיות, בואו נכיר אותן.",
+  "match": 0.93
+ },
+ "touch.alef": {
+  "hash": "be9bf540d2b3",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת אָלֶף.",
+  "heard": "לחצו על האות אלף.",
+  "match": 1.0
+ },
+ "name.bet": {
+  "hash": "272c26682597",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת בֵּית!"
+ },
+ "badge.alef": {
+  "hash": "36fce3d2fbf5",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת אָלֶף!",
+  "heard": "קיבלתם תאג של האות א.",
+  "match": 0.88
+ },
+ "here.alef": {
+  "hash": "228553b6f333",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת אָלֶף כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות א כאן. לחצו עליה.",
+  "match": 0.94
+ },
+ "catch.alef": {
+  "hash": "0599b6bd6ad2",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת אָלֶף!",
+  "heard": "לחצו על כל האותיות א.",
+  "match": 0.94
+ },
+ "intro.bet": {
+  "hash": "0f3506c719e9",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת בֵּית.",
+  "heard": "זו האות בית.",
+  "match": 1.0
+ },
+ "catch.bet": {
+  "hash": "f048d08cf036",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת בֵּית!",
+  "heard": "לחצו על כל האותיות בית.",
+  "match": 1.0
+ },
+ "find.bet": {
+  "hash": "cb3ebfdb1b88",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת בֵּית?",
+  "heard": "Ei foar it beit.",
+  "match": 0.0
+ },
+ "touch.bet": {
+  "hash": "39f74b33f4dc",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת בֵּית.",
+  "heard": "לחצו על האות בית.",
+  "match": 1.0
+ },
+ "here.bet": {
+  "hash": "ffe70d1a0fc7",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת בֵּית כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות בית כאן. לחצו עליה.",
+  "match": 1.0
+ },
+ "intro.gimel": {
+  "hash": "5a9956d173f4",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת גִּימֶל.",
+  "heard": "זוהר אות גימל.",
+  "match": 0.95
+ },
+ "name.gimel": {
+  "hash": "fb88c6fb9b58",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת גִּימֶל!"
+ },
+ "badge.bet": {
+  "hash": "e665c28d0a43",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת בֵּית!",
+  "heard": "קיבל טעם טאג של האות בית.",
+  "match": 0.8
+ },
+ "find.gimel": {
+  "hash": "8cedda8d98b2",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת גִּימֶל?",
+  "heard": "Ik foarút gean mei?",
+  "match": 0.0
+ },
+ "touch.gimel": {
+  "hash": "e8b5895c3176",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת גִּימֶל.",
+  "heard": "לחצו על האות גימל.",
+  "match": 1.0
+ },
+ "here.gimel": {
+  "hash": "b026fa01811e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת גִּימֶל כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות גימל כאן. לחצו עליה.",
+  "match": 1.0
+ },
+ "catch.gimel": {
+  "hash": "b6c3d0019ce7",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת גִּימֶל!",
+  "heard": "לחצו על כל האותיות גימל.",
+  "match": 1.0
+ },
+ "badge.gimel": {
+  "hash": "d1ea091063ab",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת גִּימֶל!",
+  "heard": "חיבלתם תג של האות גימל.",
+  "match": 0.91
+ },
+ "name.dalet": {
+  "hash": "8e0159475181",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת דָּלֶת!"
+ },
+ "intro.dalet": {
+  "hash": "d4fb2aa7b5b7",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת דָּלֶת.",
+  "heard": "זו האות דלת.",
+  "match": 1.0
+ },
+ "touch.dalet": {
+  "hash": "c502f20ffb34",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת דָּלֶת.",
+  "heard": "לחצו על האות דלת.",
+  "match": 1.0
+ },
+ "find.dalet": {
+  "hash": "e167be84537f",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת דָּלֶת?",
+  "heard": "היפלא עודדת?",
+  "match": 0.48
+ },
+ "here.dalet": {
+  "hash": "0ed35771946a",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת דָּלֶת כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות דalet כאן. לחצו עליה.",
+  "match": 0.94
+ },
+ "catch.dalet": {
+  "hash": "312258439869",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת דָּלֶת!",
+  "heard": "לחצו על כל האותיות דלת.",
+  "match": 1.0
+ },
+ "badge.dalet": {
+  "hash": "d1f16cc6a7b0",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת דָּלֶת!",
+  "heard": "כי בתאם טאג של האות דל\"ת.",
+  "match": 0.76
+ },
+ "name.he": {
+  "hash": "4d94a1defa51",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת הֵא!"
+ },
+ "intro.he": {
+  "hash": "5544d46029aa",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת הֵא.",
+  "heard": "Zohaote.",
+  "match": 0.0
+ },
+ "find.he": {
+  "hash": "e40fd158285f",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת הֵא?",
+  "heard": "איפה אתה?",
+  "match": 0.82
+ },
+ "touch.he": {
+  "hash": "aea253924d1a",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת הֵא.",
+  "heard": "לחצו על האות ה.",
+  "match": 0.96
+ },
+ "here.he": {
+  "hash": "349d2ec2d7bd",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת הֵא כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות כאן. לחצו עליה.",
+  "match": 0.94
+ },
+ "badge.he": {
+  "hash": "d0f60e35c4f9",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת הֵא!",
+  "heard": "קיבלתם תג של האותה.",
+  "match": 0.93
+ },
+ "name.vav": {
+  "hash": "a684869ffdde",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת וָו!"
+ },
+ "catch.he": {
+  "hash": "6376409bff56",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת הֵא!",
+  "heard": "לחצו על כל האותיות.",
+  "match": 0.94
+ },
+ "intro.vav": {
+  "hash": "797e2dd7c3ce",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת וָו.",
+  "heard": "זו האות ו\"ו.",
+  "match": 1.0
+ },
+ "touch.vav": {
+  "hash": "3686c518ea73",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת וָו.",
+  "heard": "לחצו על האות ו.",
+  "match": 0.96
+ },
+ "find.vav": {
+  "hash": "dfe2152b9b1c",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת וָו?",
+  "heard": "איפה האות ו?",
+  "match": 0.95
+ },
+ "catch.vav": {
+  "hash": "9ee27cc4441d",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת וָו!",
+  "heard": "לחצו על כל האותיות ו\"ו.",
+  "match": 1.0
+ },
+ "here.vav": {
+  "hash": "87dd8ac6fb33",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת וָו כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות ו' כאן. לחצו עליה.",
+  "match": 0.97
+ },
+ "name.zayin": {
+  "hash": "8c84e756385e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת זַיִן!"
+ },
+ "badge.vav": {
+  "hash": "da528aaf9f58",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת וָו!",
+  "heard": "קיבל טעם תאג של האות וו.",
+  "match": 0.85
+ },
+ "intro.zayin": {
+  "hash": "6ec646ddef45",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת זַיִן.",
+  "heard": "זוהר אוטזין",
+  "match": 0.84
+ },
+ "find.zayin": {
+  "hash": "8f6ee2883e48",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת זַיִן?",
+  "heard": "איפה האוזניים?",
+  "match": 0.78
+ },
+ "touch.zayin": {
+  "hash": "c553be03cca6",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת זַיִן.",
+  "heard": "לחצו על האות זין.",
+  "match": 1.0
+ },
+ "here.zayin": {
+  "hash": "dde86fbe4820",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת זַיִן כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "העוד זין כאן. לחצו עליה.",
+  "match": 0.89
+ },
+ "badge.zayin": {
+  "hash": "685b6808b4ac",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת זַיִן!",
+  "heard": "קיבלתם טאג של האות ז.",
+  "match": 0.81
+ },
+ "catch.zayin": {
+  "hash": "a892abe42d44",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת זַיִן!",
+  "heard": "לחצו על כל האותיות זין.",
+  "match": 1.0
+ },
+ "find.het": {
+  "hash": "bbbd010dabd3",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת חֵת?"
+ },
+ "intro.het": {
+  "hash": "6e030f7f1cf4",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת חֵת."
+ },
+ "name.het": {
+  "hash": "6e01f070937a",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת חֵת!"
+ },
+ "touch.het": {
+  "hash": "77195bc6f69d",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת חֵת."
+ },
+ "name.tet": {
+  "hash": "9c69bc223570",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת טֵית!"
+ },
+ "catch.het": {
+  "hash": "3d82c4b10571",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת חֵת!"
+ },
+ "badge.het": {
+  "hash": "08900dd09f2a",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת חֵת!"
+ },
+ "here.het": {
+  "hash": "e7739f559831",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת חֵת כָּאן. לַחֲצוּ עָלֶיהָ."
+ },
+ "intro.tet": {
+  "hash": "6e04bb1da2ac",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת טֵית.",
+  "heard": "זוהה אותית.",
+  "match": 0.89
+ },
+ "touch.tet": {
+  "hash": "5a291a7e78c4",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת טֵית.",
+  "heard": "לחצו על האות תי\"ת.",
+  "match": 0.92
+ },
+ "find.tet": {
+  "hash": "7aa12f083fcf",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת טֵית?",
+  "heard": "איפה את?",
+  "match": 0.71
+ },
+ "here.tet": {
+  "hash": "4af8de1697e1",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת טֵית כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות תתקן. לחצו עליה.",
+  "match": 0.82
+ },
+ "badge.tet": {
+  "hash": "e5511e995e04",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת טֵית!",
+  "heard": "כיבלתם תג של האות ת.",
+  "match": 0.84
+ },
+ "name.yud": {
+  "hash": "ea5d30d6c604",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת יוּד!"
+ },
+ "catch.tet": {
+  "hash": "f1a7489f4cfd",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת טֵית!",
+  "heard": "לחצו על כל האותיות תי\"ת.",
+  "match": 0.94
+ },
+ "intro.yud": {
+  "hash": "2d1ad2b2e75c",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת יוּד.",
+  "heard": "זו האותיות.",
+  "match": 0.89
+ },
+ "touch.yud": {
+  "hash": "8efbab339ef7",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת יוּד.",
+  "heard": "לחצו על האות יוד.",
+  "match": 1.0
+ },
+ "find.yud": {
+  "hash": "54ae8929853d",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת יוּד?",
+  "heard": "איפה האותיות?",
+  "match": 0.91
+ },
+ "here.yud": {
+  "hash": "8dc4ccd9dbc5",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת יוּד כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "העותיות כאן. לחצו עליה.",
+  "match": 0.89
+ },
+ "catch.yud": {
+  "hash": "ccf5113a51e3",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת יוּד!",
+  "heard": "לחצו על כל האותיות יוד.",
+  "match": 1.0
+ },
+ "name.kaf": {
+  "hash": "b58d8c3684cc",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת כַּף!"
+ },
+ "intro.kaf": {
+  "hash": "1b481e240610",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת כַּף.",
+  "heard": "זו האות כף.",
+  "match": 1.0
+ },
+ "badge.yud": {
+  "hash": "fca864581e4f",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת יוּד!",
+  "heard": "קיבלתם תג של האות י'.",
+  "match": 0.9
+ },
+ "touch.kaf": {
+  "hash": "eadac1477b81",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת כַּף.",
+  "heard": "לחצו על האות כף.",
+  "match": 1.0
+ },
+ "find.kaf": {
+  "hash": "fa1e908dcf50",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת כַּף?",
+  "heard": "איפה האות כף?",
+  "match": 1.0
+ },
+ "catch.kaf": {
+  "hash": "7b5eb4a104b0",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת כַּף!",
+  "heard": "לחצו על כל האותיות כף.",
+  "match": 1.0
+ },
+ "badge.kaf": {
+  "hash": "8a8ee6281359",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת כַּף!",
+  "heard": "קיבלתם תאג של האות כף.",
+  "match": 0.94
+ },
+ "here.kaf": {
+  "hash": "51d14508930e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת כַּף כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "העותק אפגן. לחצו עליה.",
+  "match": 0.76
+ },
+ "name.lamed": {
+  "hash": "bbbd93fae20a",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת לָמֶד!"
+ },
+ "intro.lamed": {
+  "hash": "ba13fd67b433",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת לָמֶד.",
+  "heard": "זו האות למד.",
+  "match": 1.0
+ },
+ "touch.lamed": {
+  "hash": "87c704f3c5a0",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת לָמֶד.",
+  "heard": "לחצו על האות למד.",
+  "match": 1.0
+ },
+ "find.lamed": {
+  "hash": "6b325b6470d7",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת לָמֶד?",
+  "heard": "איפה האות למד?",
+  "match": 1.0
+ },
+ "catch.lamed": {
+  "hash": "c697ab428739",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת לָמֶד!",
+  "heard": "לחצו על כל האותיות למד.",
+  "match": 1.0
+ },
+ "badge.lamed": {
+  "hash": "8f7927691f14",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת לָמֶד!",
+  "heard": "קיבלתם תג של האות למד.",
+  "match": 0.97
+ },
+ "name.mem": {
+  "hash": "a8fa433970ee",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת מֵם!"
+ },
+ "find.mem": {
+  "hash": "779b7b0f6c61",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת מֵם?",
+  "heard": "איפה האות מם?",
+  "match": 1.0
+ },
+ "here.lamed": {
+  "hash": "5d1d7c9adfb2",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת לָמֶד כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות למד כאן. לחצו עליה.",
+  "match": 1.0
+ },
+ "intro.mem": {
+  "hash": "cff51dd8a537",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת מֵם.",
+  "heard": "זו האות מם.",
+  "match": 1.0
+ },
+ "touch.mem": {
+  "hash": "936921332128",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת מֵם.",
+  "heard": "לחצו על האות מ.",
+  "match": 0.96
+ },
+ "here.mem": {
+  "hash": "2fbd6b8ab83b",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת מֵם כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות מם כאן. לחצו עליה.",
+  "match": 1.0
+ },
+ "name.nun": {
+  "hash": "d384d0b48475",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת נוּן!"
+ },
+ "catch.mem": {
+  "hash": "fbdd36aea3bc",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת מֵם!",
+  "heard": "לחצו על כל האותיות מם.",
+  "match": 1.0
+ },
+ "badge.mem": {
+  "hash": "165ff25d3ba1",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת מֵם!",
+  "heard": "קיבלתם תג של האות מם.",
+  "match": 0.97
+ },
+ "intro.nun": {
+  "hash": "19c9c0afddb1",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת נוּן.",
+  "heard": "זו האות נון.",
+  "match": 1.0
+ },
+ "find.nun": {
+  "hash": "470dd761e6e4",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת נוּן?",
+  "heard": "איפה האות נון?",
+  "match": 1.0
+ },
+ "here.nun": {
+  "hash": "8a6b23449814",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת נוּן כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות נון כאן. לחצו עליה.",
+  "match": 1.0
+ },
+ "touch.nun": {
+  "hash": "8d784d3defe7",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת נוּן.",
+  "heard": "לחצו על האות נון.",
+  "match": 1.0
+ },
+ "catch.nun": {
+  "hash": "389965b00a3b",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת נוּן!",
+  "heard": "לחצו על כל האותיות נון.",
+  "match": 1.0
+ },
+ "name.samekh": {
+  "hash": "46401a2ad67e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת סָמֶךְ!"
+ },
+ "badge.nun": {
+  "hash": "be884c01b372",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת נוּן!",
+  "heard": "קיבלתם תאג של האות נון.",
+  "match": 0.94
+ },
+ "intro.samekh": {
+  "hash": "81fe14bc24a6",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת סָמֶךְ.",
+  "heard": "זו האות סמך.",
+  "match": 1.0
+ },
+ "touch.samekh": {
+  "hash": "83ede5579f22",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת סָמֶךְ.",
+  "heard": "לחצו על האות סמך.",
+  "match": 1.0
+ },
+ "find.samekh": {
+  "hash": "46d12d01e3d0",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת סָמֶךְ?",
+  "heard": "איפה האוצרך?",
+  "match": 0.76
+ },
+ "catch.samekh": {
+  "hash": "a3d4da27c1f1",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת סָמֶךְ!",
+  "heard": "לחצו על כל האותיות סמך.",
+  "match": 1.0
+ },
+ "here.samekh": {
+  "hash": "91326b0dc181",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת סָמֶךְ כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות סמך כאן. לחצו עליה.",
+  "match": 1.0
+ },
+ "name.ayin": {
+  "hash": "97865cf9d2a1",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת עַיִן!"
+ },
+ "badge.samekh": {
+  "hash": "f38cb7a61d5d",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת סָמֶךְ!",
+  "heard": "קיבלתם תג של האות סמך.",
+  "match": 0.97
+ },
+ "intro.ayin": {
+  "hash": "3d61e86c3956",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת עַיִן.",
+  "heard": "זו האות עין.",
+  "match": 1.0
+ },
+ "touch.ayin": {
+  "hash": "8b3daebc4f5f",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת עַיִן.",
+  "heard": "לחצו על האות עין.",
+  "match": 1.0
+ },
+ "find.ayin": {
+  "hash": "3e8ef4ddebba",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת עַיִן?",
+  "heard": "איפה האותיים?",
+  "match": 0.82
+ },
+ "name.pe": {
+  "hash": "7da757d2b270",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת פֵּא!"
+ },
+ "here.ayin": {
+  "hash": "7461f2ef0996",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת עַיִן כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות עין כאן. לחצו עליה.",
+  "match": 1.0
+ },
+ "badge.ayin": {
+  "hash": "f417ed4a9526",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת עַיִן!",
+  "heard": "קיבלתם תאג של האות ע'.",
+  "match": 0.88
+ },
+ "catch.ayin": {
+  "hash": "1763d572a8b1",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת עַיִן!",
+  "heard": "לחצו על כל האותיות עין.",
+  "match": 1.0
+ },
+ "intro.pe": {
+  "hash": "13fa439e16dd",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת פֵּא.",
+  "heard": "זו האות פ.",
+  "match": 0.93
+ },
+ "find.pe": {
+  "hash": "a96d1fad4bf7",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת פֵּא?",
+  "heard": "איפה האוטפה?",
+  "match": 0.8
+ },
+ "touch.pe": {
+  "hash": "3c750cd5ad50",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת פֵּא.",
+  "heard": "לחצו על האות פ.",
+  "match": 0.96
+ },
+ "here.pe": {
+  "hash": "dfda84001975",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת פֵּא כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "העותק כאן. לחצו עליה.",
+  "match": 0.85
+ },
+ "name.tsadi": {
+  "hash": "a388407144f8",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת צַדִּי!"
+ },
+ "badge.pe": {
+  "hash": "722779e8b5f7",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת פֵּא!",
+  "heard": "קיבל טעם טאג של האות פ'.",
+  "match": 0.75
+ },
+ "catch.pe": {
+  "hash": "06e5a9dfeda9",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת פֵּא!",
+  "heard": "לחצו על כל האותיות פה.",
+  "match": 0.94
+ },
+ "intro.tsadi": {
+  "hash": "cc73147f74df",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת צַדִּי."
+ },
+ "touch.tsadi": {
+  "hash": "bbe4051d417d",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת צַדִּי."
+ },
+ "find.tsadi": {
+  "hash": "cfe2b03c2455",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת צַדִּי?"
+ },
+ "here.tsadi": {
+  "hash": "d9af39b2447b",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת צַדִּי כָּאן. לַחֲצוּ עָלֶיהָ."
+ },
+ "catch.tsadi": {
+  "hash": "859dad0ee8d8",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת צַדִּי!"
+ },
+ "badge.tsadi": {
+  "hash": "ca187f6da233",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת צַדִּי!"
+ },
+ "name.kuf": {
+  "hash": "0e7e34f94776",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת קוּוף!"
+ },
+ "intro.kuf": {
+  "hash": "d07519636ab0",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת קוּוף."
+ },
+ "touch.kuf": {
+  "hash": "0735e3850792",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת קוּוף."
+ },
+ "find.kuf": {
+  "hash": "e3eecd0d4fea",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת קוּוף?"
+ },
+ "badge.kuf": {
+  "hash": "51cc46402229",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת קוּוף!"
+ },
+ "catch.kuf": {
+  "hash": "cf2e506a4d6f",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת קוּוף!"
+ },
+ "here.kuf": {
+  "hash": "8f3c0231b844",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת קוּוף כָּאן. לַחֲצוּ עָלֶיהָ."
+ },
+ "name.resh": {
+  "hash": "f23869d78959",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת רֵישׁ!"
+ },
+ "intro.resh": {
+  "hash": "c8bf45c737cb",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת רֵישׁ.",
+  "heard": "זו האות רי\"ש.",
+  "match": 1.0
+ },
+ "touch.resh": {
+  "hash": "2035b11cefbc",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת רֵישׁ.",
+  "heard": "לחצו על האות ר'.",
+  "match": 0.92
+ },
+ "find.resh": {
+  "hash": "9f7c0f2ef79c",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת רֵישׁ?",
+  "heard": "Hy foar har otreis?",
+  "match": 0.0
+ },
+ "badge.resh": {
+  "hash": "0cc59e2564e1",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת רֵישׁ!",
+  "heard": "קיבל תאם תאג של האות רי\"ש.",
+  "match": 0.91
+ },
+ "catch.resh": {
+  "hash": "0bcc24a8d78b",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת רֵישׁ!",
+  "heard": "לחצו על כל האותיות ריש.",
+  "match": 1.0
+ },
+ "name.shin": {
+  "hash": "9c29bfeadc1e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת שִׁין!"
+ },
+ "here.resh": {
+  "hash": "0e34da17807a",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת רֵישׁ כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות ריש כאן. לחצו עליה.",
+  "match": 1.0
+ },
+ "touch.shin": {
+  "hash": "a1d2f834936d",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת שִׁין.",
+  "heard": "לחצו על האות שין.",
+  "match": 1.0
+ },
+ "intro.shin": {
+  "hash": "f233cb8c8b56",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת שִׁין.",
+  "heard": "Zoha ochieng",
+  "match": 0.0
+ },
+ "here.shin": {
+  "hash": "8aa4ab8ac5d0",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת שִׁין כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "העורצ'ייין כאן. לחצו עליה.",
+  "match": 0.79
+ },
+ "find.shin": {
+  "hash": "d7d8ceaa1968",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת שִׁין?",
+  "heard": "E whakarau kēian.",
+  "match": 0.0
+ },
+ "badge.shin": {
+  "hash": "87f703bbcc0d",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת שִׁין!",
+  "heard": "קיבלתם תאג של האות ש'.",
+  "match": 0.88
+ },
+ "catch.shin": {
+  "hash": "54c8c4cc27f5",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת שִׁין!",
+  "heard": "לחצו על כל האותיות שין.",
+  "match": 1.0
+ },
+ "name.tav": {
+  "hash": "458c786a48dc",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת תָּו!"
+ },
+ "intro.tav": {
+  "hash": "68f093a9cdb7",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ הָאוֹת תָּו.",
+  "heard": "זו האותב.",
+  "match": 0.8
+ },
+ "touch.tav": {
+  "hash": "7952fbc036af",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל הָאוֹת תָּו.",
+  "heard": "לחצו על האותיו.",
+  "match": 0.92
+ },
+ "here.tav": {
+  "hash": "82bb6eee9caf",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת תָּו כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "האות היה כאן. לחצו עליה.",
+  "match": 0.86
+ },
+ "catch.tav": {
+  "hash": "92f04d7c9d69",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת תָּו!",
+  "heard": "לחצו על כל האותיות תו.",
+  "match": 1.0
+ },
+ "find.tav": {
+  "hash": "affa2d2ccd84",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה הָאוֹת תָּו?",
+  "heard": "איפה האותב?",
+  "match": 0.84
+ },
+ "name.kaf-final": {
+  "hash": "cec97c923cf1",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת כַּף סוֹפִית!"
+ },
+ "badge.tav": {
+  "hash": "08d47ca2aab8",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל הָאוֹת תָּו!",
+  "heard": "קיבלתם תג של האות תו.",
+  "match": 0.97
+ },
+ "intro.kaf-final": {
+  "hash": "febfe98211f3",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ כַּף סוֹפִית.",
+  "heard": "Zokavsufit.",
+  "match": 0.0
+ },
+ "touch.kaf-final": {
+  "hash": "02d08e1c54ff",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כַּף סוֹפִית.",
+  "heard": "לחצו על כף סופית.",
+  "match": 1.0
+ },
+ "find.kaf-final": {
+  "hash": "2afa1155d994",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה כַּף סוֹפִית?",
+  "heard": "Ei ffo'caso fit.",
+  "match": 0.0
+ },
+ "here.kaf-final": {
+  "hash": "6d8cf6845083",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "כַּף סוֹפִית כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "כף סופית כאן. לחצו עליה.",
+  "match": 1.0
+ },
+ "catch.kaf-final": {
+  "hash": "b774adf2c1e8",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת כַּף סוֹפִית!",
+  "heard": "לחצו על כל האותיות כף סופית.",
+  "match": 1.0
+ },
+ "name.mem-final": {
+  "hash": "cd611773acd6",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת מֵם סוֹפִית!"
+ },
+ "badge.kaf-final": {
+  "hash": "d5bc1156b90c",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל כַּף סוֹפִית!",
+  "heard": "קיבלתם טאג של כף סופית.",
+  "match": 0.88
+ },
+ "intro.mem-final": {
+  "hash": "ebfbe869f57b",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ מֵם סוֹפִית.",
+  "heard": "Zo mem so fit.",
+  "match": 0.0
+ },
+ "touch.mem-final": {
+  "hash": "92e1be4516df",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל מֵם סוֹפִית.",
+  "heard": "לחצו על מם סופית.",
+  "match": 1.0
+ },
+ "find.mem-final": {
+  "hash": "893178a64292",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה מֵם סוֹפִית?",
+  "heard": "איפה הם סופית?",
+  "match": 0.91
+ },
+ "catch.mem-final": {
+  "hash": "70160fb4e4ef",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת מֵם סוֹפִית!",
+  "heard": "לחצו על כל האותיות ממסופית.",
+  "match": 0.95
+ },
+ "here.mem-final": {
+  "hash": "3109e2d39a8b",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "מֵם סוֹפִית כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "מם סופית כאן. לחצו עליה.",
+  "match": 1.0
+ },
+ "badge.mem-final": {
+  "hash": "29002f22e0b6",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל מֵם סוֹפִית!",
+  "heard": "קיבלתם תאג של מם סופית.",
+  "match": 0.94
+ },
+ "name.nun-final": {
+  "hash": "9824dc9703e4",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת נוּן סוֹפִית!"
+ },
+ "find.nun-final": {
+  "hash": "2c153b74bb27",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה נוּן סוֹפִית?",
+  "heard": "Eifun onns a fit?",
+  "match": 0.0
+ },
+ "here.nun-final": {
+  "hash": "00ee82f7d2bb",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "נוּן סוֹפִית כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "נון סופית כאן. לחצו עליה.",
+  "match": 1.0
+ },
+ "intro.nun-final": {
+  "hash": "8bfb8fd93071",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ נוּן סוֹפִית.",
+  "heard": "Son nun so fit.",
+  "match": 0.0
+ },
+ "touch.nun-final": {
+  "hash": "108495800051",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל נוּן סוֹפִית.",
+  "heard": "לחצו על נון סופית.",
+  "match": 1.0
+ },
+ "catch.nun-final": {
+  "hash": "a512588eff3a",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת נוּן סוֹפִית!",
+  "heard": "לחצו על כל האותיות נון סופית.",
+  "match": 1.0
+ },
+ "name.pe-final": {
+  "hash": "6348ba1c9b71",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת פֵּא סוֹפִית!"
+ },
+ "badge.nun-final": {
+  "hash": "c073814c3e3b",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל נוּן סוֹפִית!",
+  "heard": "קיבלתם תג של נון סופית.",
+  "match": 0.97
+ },
+ "intro.pe-final": {
+  "hash": "0773e51dd6f4",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ פֵּא סוֹפִית.",
+  "heard": "Zopesso fit.",
+  "match": 0.0
+ },
+ "touch.pe-final": {
+  "hash": "04c28882ba8e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל פֵּא סוֹפִית.",
+  "heard": "לחצו על פסופית.",
+  "match": 0.96
+ },
+ "here.pe-final": {
+  "hash": "be9a84186c67",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "פֵּא סוֹפִית כָּאן. לַחֲצוּ עָלֶיהָ.",
+  "heard": "תסופית כאן. לחצו עליה.",
+  "match": 0.91
+ },
+ "find.pe-final": {
+  "hash": "5fa07e1f467e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה פֵּא סוֹפִית?",
+  "heard": "E fope so fit?",
+  "match": 0.0
+ },
+ "badge.pe-final": {
+  "hash": "0db41c8cf98e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל פֵּא סוֹפִית!",
+  "heard": "קיבלתם תג של פספוסית.",
+  "match": 0.85
+ },
+ "catch.pe-final": {
+  "hash": "2b2dfd976eb0",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת פֵּא סוֹפִית!",
+  "heard": "לחצו על כל האותיות בסופית.",
+  "match": 0.93
+ },
+ "name.tsadi-final": {
+  "hash": "c646dffd7823",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "הָאוֹת צַדִּי סוֹפִית!"
+ },
+ "intro.tsadi-final": {
+  "hash": "2a4897f19d41",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "זוֹ צַדִּי סוֹפִית."
+ },
+ "find.tsadi-final": {
+  "hash": "4f73fdef4026",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "אֵיפֹה צַדִּי סוֹפִית?"
+ },
+ "touch.tsadi-final": {
+  "hash": "f25e4bf698fe",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל צַדִּי סוֹפִית."
+ },
+ "catch.tsadi-final": {
+  "hash": "4ddc562673af",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "לַחֲצוּ עַל כֹּל הָאוֹתִיּוֹת צַדִּי סוֹפִית!"
+ },
+ "badge.tsadi-final": {
+  "hash": "732a664dba20",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "קִבַּלְתֶּם תָּג שֶׁל צַדִּי סוֹפִית!"
+ },
+ "here.tsadi-final": {
+  "hash": "01708a6c7a90",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "captain",
+  "playback": 1.27,
+  "text": "צַדִּי סוֹפִית כָּאן. לַחֲצוּ עָלֶיהָ."
+ },
+ "pup.bloki": {
+  "hash": "e38cf5a4b39f",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "bloki",
+  "playback": 1.27,
+  "text": "הַב הַב! אֲנִי בְּלוֹקִי, הַבַּנַּאי. אֲנִי בּוֹנֶה וּמְתַקֵּן!",
+  "heard": "הב הב, אני בלוקי, הבנאי. אני בונה ומתקן.",
+  "match": 1.0
+ },
+ "pup.anani": {
+  "hash": "e5139c2968c4",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "anani",
+  "playback": 1.3,
+  "text": "הַב הַב! אֲנִי עֲנָנִי, הַטַּיֶּסֶת. אֲנִי טָסָה בַּמַּסּוֹק!",
+  "heard": "הב הב, אני ענני, אתה יסד, אני טס במסוק.",
+  "match": 0.89
+ },
+ "pup.pilpel": {
+  "hash": "a40e98391f9c",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "pilpel",
+  "playback": 1.28,
+  "text": "הַב הַב! אֲנִי פִּלְפֵּל, הַכַּבַּאי. אֲנִי מְכַבֶּה שְׂרֵפוֹת!",
+  "heard": "הב הב, אני פלפל הקבאי, אני מחבש שריפות.",
+  "match": 0.88
+ },
+ "pup.dubi": {
+  "hash": "829385b0e16d",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "dubi",
+  "playback": 1.27,
+  "text": "הַב הַב! אֲנִי דּוּבִּי, הַשּׁוֹטֵר. אֲנִי שׁוֹמֵר עַל כֻּלָּם!",
+  "heard": "הב הב, אני דובי, השוטר, אני שומר על כולם.",
+  "match": 0.98
+ },
+ "ready.pilpel": {
+  "hash": "3b50532b4b7e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "pilpel",
+  "playback": 1.28,
+  "text": "פִּלְפֵּל מוּכָן!",
+  "heard": "פלפל מוכן.",
+  "match": 1.0
+ },
+ "ready.dubi": {
+  "hash": "822a2be53cba",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "dubi",
+  "playback": 1.27,
+  "text": "דּוּבִּי מוּכָן!",
+  "heard": "דאובי מוכן.",
+  "match": 0.94
+ },
+ "pup.gali": {
+  "hash": "facfce7ac19e",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "gali",
+  "playback": 1.28,
+  "text": "הַב הַב! אֲנִי גַּלִּי, הַמַּצִּילָה. אֲנִי שׁוֹמֶרֶת עַל הַיָּם!",
+  "heard": "הב הב, אני גאלי, המצילה, אני שומרת על הים.",
+  "match": 0.98
+ },
+ "pup.lulu": {
+  "hash": "f86f39403dce",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "lulu",
+  "playback": 1.3,
+  "text": "הַב הַב! אֲנִי לוּלוּ, הַוֶּטֶרִינָרִית. אֲנִי מְטַפֶּלֶת בַּחַיּוֹת!",
+  "heard": "הב הב, אני לולו, הווטרינרית. אני מטפלת בחיות.",
+  "match": 0.99
+ },
+ "ready.anani": {
+  "hash": "d9dc515f9bc6",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "anani",
+  "playback": 1.3,
+  "text": "עֲנָנִי מוּכָנָה!",
+  "heard": "Anani mohana.",
+  "match": 0.0
+ },
+ "ready.gali": {
+  "hash": "a6586ec76296",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "gali",
+  "playback": 1.28,
+  "text": "גַּלִּי מוּכָנָה!",
+  "heard": "גלי מוכנה.",
+  "match": 1.0
+ },
+ "ready.bloki": {
+  "hash": "185e60d44190",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "bloki",
+  "playback": 1.27,
+  "text": "בְּלוֹקִי מוּכָן!",
+  "heard": "בלוקי מוכן.",
+  "match": 1.0
+ },
+ "ready.lulu": {
+  "hash": "c86e09f85a01",
+  "provider": "edge",
+  "voice": "he-IL-HilaNeural",
+  "speaker": "lulu",
+  "playback": 1.3,
+  "text": "לוּלוּ מוּכָנָה!",
+  "heard": "לולו מוכנה.",
+  "match": 1.0
+ }
+}

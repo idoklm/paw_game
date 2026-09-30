@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>בדיקת קריינות</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  html, body { overflow: auto; height: auto; background: #CFEFF7; user-select: text; -webkit-user-select: text; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 60px; font-size: 18px; }
+  h1 { margin: 0 0 6px; font-size: 32px; }
+  p { margin: 6px 0 16px; line-height: 1.5; }
+  .row { display: grid; grid-template-columns: 60px 70px 1fr 1fr; gap: 12px; align-items: center; background: var(--paper); border: 3px solid var(--ink); border-radius: 16px; padding: 10px 14px; margin-bottom: 8px; }
+  .row.low { background: #FFE9E4; }
+  .row.mid { background: #FFF6D8; }
+  .score { font-weight: 800; font-size: 20px; direction: ltr; text-align: center; }
+  .id { display: block; font-size: 13px; color: #6B6680; direction: ltr; text-align: right; }
+  .heard { color: #6B6680; }
+  button.play { font: inherit; font-size: 20px; width: 56px; height: 46px; border-radius: 14px; border: 3px solid var(--ink); background: #fff; cursor: pointer; }
+  button.play.on { background: var(--sun); }
+  .tools { display: flex; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<main>
+  <h1>בדיקת כל משפטי הקריינות</h1>
+  <p>המספר הוא ההתאמה בין הטקסט לבין מה ששירות התמלול שמע (1 = זהה). השורות האדומות למעלה הן אלה שכדאי לשמוע קודם. במשפטים קצרים מאוד, כמו שם של אות, התמלול טועה גם כשההגייה נכונה.<br>
+  אם משפט נשמע לא טוב: תכתוב לי את המזהה שלו (האותיות באנגלית מתחת לטקסט).</p>
+  <div class="tools"><button class="pill" id="playlow">לשמוע ברצף את כל השורות האדומות</button><span id="count"></span></div>
+  <div id="list"></div>
+</main>
+<script type="module">
+  const index = await (await fetch('../audio/tts/index.json', { cache: 'no-store' })).json();
+  const rows = Object.entries(index).map(([id, v]) => ({ id, ...v })).sort((a, b) => (a.match ?? 2) - (b.match ?? 2));
+  const list = document.getElementById('list');
+  let current = null;
+  // Same playback as the game: faster, with the pitch not preserved (this makes the child voices).
+  const play = (btn, src, factor = 1) => new Promise((resolve) => {
+    if (current) { current.audio.pause(); current.btn.classList.remove('on'); }
+    const audio = new Audio(src);
+    audio.preservesPitch = false;
+    audio.defaultPlaybackRate = factor;
+    audio.playbackRate = factor;
+    current = { audio, btn };
+    btn.classList.add('on');
+    const done = () => { btn.classList.remove('on'); resolve(); };
+    audio.onended = done; audio.onerror = done;
+    audio.play().catch(done);
+  });
+  const low = [];
+  for (const r of rows) {
+    const el = document.createElement('div');
+    const m = r.match;
+    el.className = 'row' + (m === undefined ? '' : m < 0.6 ? ' low' : m < 0.85 ? ' mid' : '');
+    const b = document.createElement('button');
+    b.className = 'play'; b.textContent = '▶';
+    const src = `../audio/tts/${r.id}.mp3?h=${r.hash}`;
+    b.addEventListener('click', () => play(b, src, r.playback || 1));
+    const score = document.createElement('div'); score.className = 'score'; score.textContent = m === undefined ? '-' : m.toFixed(2);
+    const text = document.createElement('div'); text.textContent = r.text;
+    const id = document.createElement('span'); id.className = 'id'; id.textContent = r.id; text.append(id);
+    const heard = document.createElement('div'); heard.className = 'heard'; heard.textContent = r.heard || '';
+    el.append(b, score, text, heard);
+    list.append(el);
+    if (m !== undefined && m < 0.6) low.push([b, src, r.playback || 1]);
+  }
+  document.getElementById('count').textContent = `${rows.length} משפטים, ${low.length} אדומים`;
+  document.getElementById('playlow').addEventListener('click', async () => { for (const [b, src, f] of low) await play(b, src, f); });
+</script>
+</body>
+</html>

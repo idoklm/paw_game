@@ -1,0 +1,6 @@
+.playwright-mcp/
+node_modules/
+*.log
+dev/voice-samples/
+dev/voice-lab/
+__pycache__/

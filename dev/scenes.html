@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head><meta charset="utf-8"><title>Scene check</title>
+<link rel="stylesheet" href="../css/art.css"><link rel="stylesheet" href="../css/style.css">
+<style>*{animation:none!important} #stage{transform:none}</style></head>
+<body><div id="app"><div id="stage"><div class="scene" id="s"></div></div></div>
+<script type="module">
+  // Dev check: ?theme=bridge shows one mission backdrop with three items.
+  import { missionBackdrop, itemSVG, ITEM_FOR_THEME } from '../js/art/scenes.js';
+  const theme = new URLSearchParams(location.search).get('theme') || 'bridge';
+  const t = ITEM_FOR_THEME[theme];
+  const s = document.getElementById('s');
+  s.innerHTML = missionBackdrop(theme) + '<div class="play"></div>';
+  ['א', 'מ', 'ש'].forEach((ch, i) => {
+    s.querySelector('.play').insertAdjacentHTML('beforeend', `<div class="item ${t}" style="left:${250 + i * 320}px;top:430px">${itemSVG(t, i)}<span class="glyph">${ch}</span></div>`);
+  });
+</script></body></html>

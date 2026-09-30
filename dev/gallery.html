@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Art gallery</title>
+<link rel="stylesheet" href="../css/art.css">
+<style>
+  body { margin: 0; background: #CFEFF7; font-family: sans-serif; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px; align-items: flex-end; }
+  .cell { width: 200px; text-align: center; }
+  .cell.big { width: 320px; }
+  .cell svg { width: 100%; height: auto; }
+  h2 { margin: 8px 12px; font-size: 16px; }
+</style>
+</head>
+<body>
+<h2>puppies</h2><div class="row" id="pups"></div>
+<h2>states</h2><div class="row" id="states"></div>
+<h2>heads</h2><div class="row" id="heads"></div>
+<h2>captain + vehicles</h2><div class="row" id="more"></div>
+<script type="module">
+  import { PUPPIES, puppySVG } from '../js/art/puppies.js';
+  const q = (id) => document.getElementById(id);
+  const params = new URLSearchParams(location.search);
+  const still = params.has('still');
+  if (still) document.head.insertAdjacentHTML('beforeend', '<style>*{animation:none!important}</style>');
+  if (params.get('sec')) document.head.insertAdjacentHTML('beforeend', `<style>h2,.row{display:none}#${params.get('sec')}{display:flex}</style>`);
+  if (params.get('size')) document.head.insertAdjacentHTML('beforeend', `<style>.cell{width:${params.get('size')}px!important}</style>`);
+  for (const p of PUPPIES) q('pups').insertAdjacentHTML('beforeend', `<div class="cell">${puppySVG(p.id)}<div>${p.name}</div></div>`);
+  q('states').insertAdjacentHTML('beforeend', `<div class="cell">${puppySVG('pilpel', { className: 'is-cheer' })}</div>`);
+  q('states').insertAdjacentHTML('beforeend', `<div class="cell">${puppySVG('lulu', { className: 'is-talk' })}</div>`);
+  q('states').insertAdjacentHTML('beforeend', `<div class="cell">${puppySVG('gali', { className: 'is-sad' })}</div>`);
+  for (const p of PUPPIES) q('heads').insertAdjacentHTML('beforeend', `<div class="cell" style="width:120px">${puppySVG(p.id, { headOnly: true })}</div>`);
+  try {
+    const { captainSVG } = await import('../js/art/captain.js');
+    q('more').insertAdjacentHTML('beforeend', `<div class="cell big">${captainSVG({ className: 'is-wave' })}</div>`);
+    const { vehicleSVG } = await import('../js/art/vehicles.js');
+    for (const p of PUPPIES) q('more').insertAdjacentHTML('beforeend', `<div class="cell big">${vehicleSVG(p.id)}</div>`);
+  } catch (e) { console.log('optional art missing', e.message); }
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "lighthouse-team",
+  "private": true,
+  "type": "module",
+  "description": "Hebrew letters game for children aged 3-6. Static site, no dependencies.",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "serve": "python -m http.server 8765"
+  }
+}
