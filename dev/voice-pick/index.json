@@ -1,0 +1,93 @@
+{
+ "variants": [
+  {
+   "name": "c-marin",
+   "kind": "captain",
+   "label": "OpenAI marin"
+  },
+  {
+   "name": "c-cedar",
+   "kind": "captain",
+   "label": "OpenAI cedar"
+  },
+  {
+   "name": "c-coral",
+   "kind": "captain",
+   "label": "OpenAI coral"
+  },
+  {
+   "name": "c-sage",
+   "kind": "captain",
+   "label": "OpenAI sage"
+  },
+  {
+   "name": "c-shimmer",
+   "kind": "captain",
+   "label": "OpenAI shimmer"
+  },
+  {
+   "name": "c-ballad",
+   "kind": "captain",
+   "label": "OpenAI ballad"
+  },
+  {
+   "name": "c-hila",
+   "kind": "captain",
+   "label": "Microsoft Hila"
+  },
+  {
+   "name": "c-avri",
+   "kind": "captain",
+   "label": "Microsoft Avri"
+  },
+  {
+   "name": "p-marin",
+   "kind": "puppy",
+   "label": "OpenAI marin"
+  },
+  {
+   "name": "p-coral",
+   "kind": "puppy",
+   "label": "OpenAI coral"
+  },
+  {
+   "name": "p-shimmer",
+   "kind": "puppy",
+   "label": "OpenAI shimmer"
+  },
+  {
+   "name": "p-sage",
+   "kind": "puppy",
+   "label": "OpenAI sage"
+  },
+  {
+   "name": "p-hila",
+   "kind": "puppy",
+   "label": "Microsoft Hila"
+  }
+ ],
+ "lines": {
+  "hello": "שָׁלוֹם! אֲנִי קַפְּטֵן אוֹרִי, מִן הַמִּגְדַּלּוֹר.",
+  "story.bridge": "אוֹי, לֹא! רוּחַ חֲזָקָה הֵפִּילָה אֶת הָאוֹתִיּוֹת מִן הַגֶּשֶׁר לַמַּיִם. בּוֹאוּ נַצִּיל אוֹתָן!",
+  "name.bet": "הָאוֹת בֵּית!",
+  "name.lamed": "הָאוֹת לָמֶד!",
+  "find.tsadi": "אֵיפֹה הָאוֹת צָדִי?",
+  "intro.alef": "זוֹ הָאוֹת אָלֶף.",
+  "praise.1": "כֹּל הַכָּבוֹד!",
+  "pup.pilpel": "הַב הַב! אֲנִי פִּלְפֵּל, הַכַּבַּאי. אֲנִי מְכַבֶּה שְׂרֵפוֹת!",
+  "ready.anani": "עֲנָנִי מוּכָנָה!"
+ },
+ "captain_lines": [
+  "hello",
+  "story.bridge",
+  "name.bet",
+  "name.lamed",
+  "find.tsadi",
+  "intro.alef",
+  "praise.1"
+ ],
+ "puppy_lines": [
+  "pup.pilpel",
+  "ready.anani"
+ ]
+}

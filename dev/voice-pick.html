@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>בחירת קול</title>
+<style>
+  :root { --ink: #2B2340; --paper: #FFFDF7; --sun: #FFC93C; }
+  body { margin: 0; background: #CFEFF7; color: var(--ink); font-family: system-ui, "Noto Sans Hebrew", Arial, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 60px; }
+  h1 { font-size: 28px; margin: 0 0 6px; }
+  h2 { font-size: 22px; margin: 26px 0 8px; }
+  p { line-height: 1.5; margin: 6px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+  .card { background: var(--paper); border: 3px solid var(--ink); border-radius: 18px; padding: 12px 14px; }
+  .card h3 { margin: 0 0 8px; font-size: 20px; display: flex; gap: 10px; align-items: baseline; }
+  .card h3 b { background: var(--sun); border: 2px solid var(--ink); border-radius: 10px; padding: 0 8px; }
+  .card .note { font-size: 14px; color: #6B6680; margin: 0 0 6px; }
+  button { font: inherit; font-size: 16px; display: block; width: 100%; text-align: right; margin: 4px 0; padding: 8px 10px; border: 2px solid var(--ink); border-radius: 12px; background: #fff; cursor: pointer; }
+  button.on { background: var(--sun); }
+  button.all { font-weight: 700; }
+</style>
+</head>
+<body>
+<main>
+  <h1>בחירת קול לקריינות</h1>
+  <p>קולות טבעיים, בלי שינוי גובה ובלי האצה. לקולות של OpenAI יש הוראות משחק והנחיות הגייה לכל שם של אות (בית = "bet", לָמֶד = LA-med).<br>
+  תבחר מספר לקפטן ומספר לכלבלבים. אפשר גם לבחור קול אחד לכלבלבים ולקבוע שכל כלבלב יקבל קול אחר מהרשימה.</p>
+  <h2>הקפטן אורי</h2>
+  <div class="grid" id="captain"></div>
+  <h2>הכלבלבים</h2>
+  <div class="grid" id="puppy"></div>
+</main>
+<script>
+  const NOTES = { 'c-ballad': 'לא אמין: במשפט אחד הקובץ ארוך פי 5, כנראה הוסיף מילים.' };
+  let current = null;
+  const play = (btn, src) => new Promise((resolve) => {
+    if (current) { current.a.pause(); current.b.classList.remove('on'); }
+    const a = new Audio(src);
+    current = { a, b: btn };
+    btn.classList.add('on');
+    const done = () => { btn.classList.remove('on'); resolve(); };
+    a.onended = done; a.onerror = done;
+    a.play().catch(done);
+  });
+  fetch('voice-pick/index.json').then((r) => r.json()).then((d) => {
+    let n = 0;
+    for (const kind of ['captain', 'puppy']) {
+      const box = document.getElementById(kind);
+      const lines = d[`${kind}_lines`];
+      for (const v of d.variants.filter((x) => x.kind === kind)) {
+        n++;
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `<h3><b>${n}</b>${v.label}</h3>` + (NOTES[v.name] ? `<p class="note">${NOTES[v.name]}</p>` : '');
+        const all = document.createElement('button');
+        all.className = 'all';
+        all.textContent = '▶ לשמוע הכול ברצף';
+        card.append(all);
+        const buttons = lines.map((l) => {
+          const b = document.createElement('button');
+          b.textContent = '▶ ' + d.lines[l];
+          const src = `voice-pick/${v.name}/${l}.mp3`;
+          b.addEventListener('click', () => play(b, src));
+          card.append(b);
+          return [b, src];
+        });
+        all.addEventListener('click', async () => { for (const [b, s] of buttons) await play(b, s); });
+        box.append(card);
+      }
+    }
+  });
+</script>
+</body>
+</html>
