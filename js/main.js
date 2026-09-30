@@ -46,6 +46,7 @@ export async function go(name, params = {}) {
     },
   };
   current = entry;
+  dispatchEvent(new Event('scenechange'));
   try {
     await SCENES[name].show(root, params, ctx, go);
   } catch (e) {
@@ -68,6 +69,19 @@ async function boot() {
   if (start && SCENES[start]) go(start, Object.fromEntries(params));
   else go('title');
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    // A new version installs in the background. When it takes over, reload to show it, but only on
+    // the first screens: a reload in the middle of a mission would surprise the child.
+    const hadController = Boolean(navigator.serviceWorker.controller);
+    let updateReady = false;
+    const reloadIfSafe = () => {
+      if (updateReady && current && ['title', 'profiles'].includes(current.name)) location.reload();
+    };
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!hadController) return; // the first install: the page is already the current version
+      updateReady = true;
+      reloadIfSafe();
+    });
+    addEventListener('scenechange', reloadIfSafe);
     navigator.serviceWorker.register('sw.js').catch(() => {});
   }
 }

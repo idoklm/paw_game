@@ -1,7 +1,7 @@
 // Service worker: keeps every game file on the tablet, so the game works without internet.
 // tools/build.mjs writes precache.json and updates VERSION when any file changes.
 
-const VERSION = '81f40fcf4b';
+const VERSION = 'd5807852b9';
 const CACHE = `lighthouse-team-${VERSION}`;
 
 self.addEventListener('install', (event) => {
