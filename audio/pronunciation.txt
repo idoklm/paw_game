@@ -1,14 +1,14 @@
 Pronunciation rules (Israeli Hebrew, as taught in kindergarten). Follow them exactly.
 Hebrew letter names:
 אָלֶף = A-lef, stress on the first syllable.
-בֵּית = BET, one syllable, like the English word "bet". No "i" or "y" sound.
+בֵּית (also written בֶּת) = BET, one syllable, like the English word "bet". No "i" or "y" sound.
 גִּימֶל = GI-mel, stress on the first syllable.
 דָּלֶת = DA-let, stress on the first syllable.
 הֵא = HE, one short syllable.
 וָו = VAV.
 זַיִן = ZA-yin, stress on the first syllable.
-חֵית = KHET, one syllable, throaty kh. No "i" or "y" sound.
-טֵית = TET, one syllable. No "i" or "y" sound.
+חֵית (also written חֶת) = KHET, one syllable, throaty kh. No "i" or "y" sound.
+טֵית (also written טֶת) = TET, one syllable. No "i" or "y" sound.
 יוּד = YUD.
 כַּף = KAF.
 לָמֶד = LA-med, stress on the FIRST syllable (not la-MED).
@@ -19,7 +19,7 @@ Hebrew letter names:
 פֵּא = PE, with a clear P.
 צָדִי = TSA-di, stress on the first syllable.
 קוּף = KUF (not "kof").
-רֵישׁ = RESH, one syllable. No "i" or "y" sound.
+רֵישׁ (also written רֶשׁ) = RESH, one syllable. No "i" or "y" sound.
 שִׁין = SHIN.
 תָּו = TAV.
 סוֹפִית = so-FIT, stress on the last syllable (as in "מֵם סוֹפִית").

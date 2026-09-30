@@ -1,13 +1,16 @@
-"""Make the narration files: audio/tts/<line id>.mp3 for every line in audio/lines.txt.
+"""Make the narration files: audio/tts/<line id>.mp3 for every line in audio/lines.json.
 
   python tools/tts.py            create missing or changed files (voice settings: audio/voices.json)
-  python tools/tts.py --check    also transcribe each file and compare it with the text (needs OPENAI_API_KEY)
+  python tools/tts.py --check    also transcribe long lines and make them again if the words do not match
   python tools/tts.py --force    create all files again
   python tools/tts.py --only find.   only lines whose id starts with "find."
 
-Providers: edge (Microsoft voices through the Edge read-aloud service, free: pip install edge-tts)
-and openai (needs OPENAI_API_KEY). A recording in audio/custom/<id>.mp3 always wins, so that line is skipped.
-The tool runs tools/build.mjs before and after, so lines.txt, the audio manifest, and the offline list stay current.
+Providers: openai (natural voices; needs OPENAI_API_KEY) and edge (Microsoft voices, free: pip install edge-tts).
+OpenAI lines get acting instructions (voices.json "roles" and "style") plus audio/pronunciation.txt.
+A recording in audio/custom/<id>.mp3 always wins, so that line is skipped.
+Every file is checked for a suspicious length (a voice sometimes adds words or stops early) and made again.
+The tool runs tools/build.mjs before and after, so the line list, the audio manifest, and the offline list stay current.
+Costs are estimated in dev/openai-cost.json.
 """
 import argparse
 import asyncio
@@ -18,6 +21,8 @@ import os
 import re
 import subprocess
 import sys
+import time
+import urllib.error
 import urllib.request
 import uuid
 from concurrent.futures import ThreadPoolExecutor
@@ -27,22 +32,11 @@ ROOT = Path(__file__).resolve().parent.parent
 AUDIO = ROOT / 'audio'
 TTS = AUDIO / 'tts'
 KEY = os.environ.get('OPENAI_API_KEY', '')
-
-# Minimum mp3 bytes per Hebrew letter. Below this the service probably cut the audio short.
-MIN_BYTES_PER_LETTER = {'edge': 300, 'openai': 800}
+LEDGER = ROOT / 'dev' / 'openai-cost.json'
 
 
 def run_build():
     subprocess.run(['node', str(ROOT / 'tools' / 'build.mjs')], check=True, cwd=ROOT)
-
-
-def read_lines():
-    rows = []
-    for row in (AUDIO / 'lines.txt').read_text(encoding='utf-8').splitlines():
-        if row and not row.startswith('#'):
-            parts = row.split('\t')
-            rows.append({'id': parts[0], 'speaker': parts[1], 'text': parts[2]})
-    return rows
 
 
 def letters(text):
@@ -57,14 +51,27 @@ def similarity(a, b):
     return round(difflib.SequenceMatcher(None, a, b).ratio(), 2)
 
 
-def settings_hash(line, cfg, instructions):
-    raw = json.dumps([line['text'], cfg, instructions if cfg['provider'] == 'openai' else ''], ensure_ascii=False)
-    return hashlib.sha1(raw.encode()).hexdigest()[:12]
+def log_cost(what, usd):
+    ledger = json.loads(LEDGER.read_text(encoding='utf-8')) if LEDGER.exists() else {'entries': []}
+    ledger['entries'].append({'what': what, 'usd_estimate': round(usd, 4)})
+    ledger['total_logged_usd_estimate'] = round(sum(e.get('usd_estimate', 0) for e in ledger['entries']), 4)
+    LEDGER.write_text(json.dumps(ledger, indent=1), encoding='utf-8')
+
+
+def post(url, body, ctype='application/json', tries=4):
+    for i in range(tries):
+        try:
+            req = urllib.request.Request(url, data=body, method='POST', headers={'Authorization': f'Bearer {KEY}', 'Content-Type': ctype})
+            return urllib.request.urlopen(req, timeout=180).read()
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 500, 502, 503) and i < tries - 1:
+                time.sleep(3 * (i + 1))
+                continue
+            raise RuntimeError(f'HTTP {e.code}: {e.read()[:300]}')
 
 
 # ---------- providers ----------
 def edge_rate(cfg):
-    """Speech rate for edge-tts, so that after the playback speed-up the final speed is cfg['pace']."""
     if 'rate' in cfg:
         return cfg['rate']
     return f"{round((cfg.get('pace', 1) / cfg.get('playback', 1) - 1) * 100):+d}%"
@@ -80,9 +87,7 @@ def openai_speech(text, cfg, instructions, path):
         raise RuntimeError('OPENAI_API_KEY is not set')
     body = json.dumps({'model': cfg.get('model', 'gpt-4o-mini-tts'), 'voice': cfg['voice'], 'input': text,
                        'instructions': instructions, 'response_format': 'mp3'}).encode()
-    req = urllib.request.Request('https://api.openai.com/v1/audio/speech', data=body, method='POST',
-                                 headers={'Authorization': f'Bearer {KEY}', 'Content-Type': 'application/json'})
-    path.write_bytes(urllib.request.urlopen(req, timeout=180).read())
+    path.write_bytes(post('https://api.openai.com/v1/audio/speech', body))
 
 
 def transcribe(path):
@@ -92,88 +97,124 @@ def transcribe(path):
     parts.append(f'--{boundary}\r\nContent-Disposition: form-data; name="file"; filename="a.mp3"\r\n'
                  f'Content-Type: audio/mpeg\r\n\r\n'.encode() + path.read_bytes() + b'\r\n')
     parts.append(f'--{boundary}--\r\n'.encode())
-    req = urllib.request.Request('https://api.openai.com/v1/audio/transcriptions', data=b''.join(parts), method='POST',
-                                 headers={'Authorization': f'Bearer {KEY}', 'Content-Type': f'multipart/form-data; boundary={boundary}'})
-    return json.load(urllib.request.urlopen(req, timeout=180)).get('text', '')
+    return json.loads(post('https://api.openai.com/v1/audio/transcriptions', b''.join(parts), f'multipart/form-data; boundary={boundary}')).get('text', '')
+
+
+def length_ok(path, text, provider):
+    """OpenAI mp3 is about 2.3 KB per Hebrew letter plus about 9 KB of edges. Far outside that = added or lost words."""
+    if provider != 'openai':
+        return path.stat().st_size >= 300 * max(1, len(letters(text)))
+    expected = 9000 + 2300 * len(letters(text))
+    size = path.stat().st_size
+    return 0.35 * expected <= size <= 3 * expected
 
 
 # ---------- main ----------
-async def make(line, cfg, instructions, pool, sem):
-    path = TTS / f"{line['id']}.mp3"
-    minimum = MIN_BYTES_PER_LETTER[cfg['provider']] * max(1, len(letters(line['text'])))
-    for attempt in range(3):
-        async with sem:
-            if cfg['provider'] == 'edge':
-                await edge_speech(line['text'], cfg, path)
-            else:
-                await asyncio.get_running_loop().run_in_executor(pool, openai_speech, line['text'], cfg, instructions, path)
-        if path.stat().st_size >= minimum:
-            return attempt
-        print(f"  {line['id']}: audio looks cut short ({path.stat().st_size} bytes), trying again")
-    return attempt
-
-
 async def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--check', action='store_true')
     ap.add_argument('--force', action='store_true')
     ap.add_argument('--only', default='')
-    ap.add_argument('--jobs', type=int, default=4)
+    ap.add_argument('--jobs', type=int, default=6)
     args = ap.parse_args()
 
     run_build()
     voices = json.loads((AUDIO / 'voices.json').read_text(encoding='utf-8'))
+    rules = (AUDIO / 'pronunciation.txt').read_text(encoding='utf-8')
+    lines = json.loads((AUDIO / 'lines.json').read_text(encoding='utf-8'))
     TTS.mkdir(parents=True, exist_ok=True)
     index_path = TTS / 'index.json'
     index = json.loads(index_path.read_text(encoding='utf-8')) if index_path.exists() else {}
     custom = {p.stem for p in (AUDIO / 'custom').glob('*') if p.suffix in ('.mp3', '.m4a', '.ogg', '.wav')}
 
+    def settings(line):
+        cfg = voices.get(line['speaker']) or voices['puppy']
+        text = line.get('tts', line['text']) if cfg['provider'] == 'openai' else line['say']
+        instructions = ''
+        if cfg['provider'] == 'openai':
+            instructions = voices['roles'][cfg.get('role', 'captain')]
+            if cfg.get('style'):
+                instructions += ' ' + cfg['style']
+            instructions += '\n\n' + rules
+        h = hashlib.sha1(json.dumps([text, cfg, instructions], ensure_ascii=False).encode()).hexdigest()[:12]
+        return cfg, text, instructions, h
+
     todo = []
-    for line in read_lines():
+    for line in lines:
         if not line['id'].startswith(args.only) or line['id'] in custom:
             continue
-        cfg = voices.get(line['speaker']) or voices['puppy']
-        role = 'captain' if line['speaker'] == 'captain' else 'puppy'
-        instructions = voices.get('openai_instructions', {}).get(role, '')
-        h = settings_hash(line, cfg, instructions)
+        cfg, text, instructions, h = settings(line)
         done = (TTS / f"{line['id']}.mp3").exists() and index.get(line['id'], {}).get('hash') == h
         if args.force or not done:
-            todo.append((line, cfg, instructions, h))
+            todo.append((line, cfg, text, instructions, h))
+
+    pool = ThreadPoolExecutor(args.jobs)
+    loop = asyncio.get_running_loop()
+    sem = asyncio.Semaphore(args.jobs)
+    stats = {'chars': 0, 'instr_chars': 0, 'retries': 0, 'transcribed_letters': 0}
+
+    async def render(line, cfg, text, instructions):
+        path = TTS / f"{line['id']}.mp3"
+        for attempt in range(3):
+            async with sem:
+                if cfg['provider'] == 'edge':
+                    await edge_speech(text, cfg, path)
+                else:
+                    stats['chars'] += len(text)
+                    stats['instr_chars'] += len(instructions)
+                    await loop.run_in_executor(pool, openai_speech, text, cfg, instructions, path)
+            if length_ok(path, text, cfg['provider']):
+                return
+            stats['retries'] += 1
+            print(f"  {line['id']}: length looks wrong ({path.stat().st_size} bytes), making it again")
 
     print(f'creating {len(todo)} files...')
-    sem = asyncio.Semaphore(args.jobs)
-    with ThreadPoolExecutor(args.jobs) as pool:
-        async def one(item):
-            line, cfg, instructions, h = item
-            await make(line, cfg, instructions, pool, sem)
+    for i in range(0, len(todo), 24):
+        batch = todo[i:i + 24]
+        await asyncio.gather(*(render(l, c, t, ins) for l, c, t, ins, _ in batch))
+        for line, cfg, text, instructions, h in batch:
             index[line['id']] = {'hash': h, 'provider': cfg['provider'], 'voice': cfg['voice'], 'speaker': line['speaker'],
-                                 'playback': cfg.get('playback', 1), 'text': line['text']}
-        for i in range(0, len(todo), 20):
-            await asyncio.gather(*(one(x) for x in todo[i:i + 20]))
-            print(f'  {min(i + 20, len(todo))}/{len(todo)}')
-            index_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding='utf-8')
+                                 'playback': cfg.get('playback', 1), 'text': text}
+        index_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding='utf-8')
+        print(f'  {min(i + 24, len(todo))}/{len(todo)}')
 
-    if args.check:
-        if not KEY:
-            print('--check needs OPENAI_API_KEY; skipped')
-        else:
-            ids = [l['id'] for l in read_lines() if l['id'].startswith(args.only) and l['id'] in index]
-            print(f'checking {len(ids)} files...')
+    if args.check and KEY:
+        # Only lines with 3 words or more: the transcriber writes single words in other scripts.
+        ids = [l['id'] for l in lines if l['id'].startswith(args.only) and l['id'] in index and len(index[l['id']]['text'].split()) >= 3
+               and (args.force or 'match' not in index[l['id']] or l['id'] in {t[0]['id'] for t in todo})]
+        print(f'checking {len(ids)} files...')
+        by_id = {l['id']: l for l in lines}
 
-            def check(line_id):
-                heard = transcribe(TTS / f'{line_id}.mp3')
-                index[line_id]['heard'] = heard
-                index[line_id]['match'] = similarity(index[line_id]['text'], heard)
+        def check(line_id):
+            heard = transcribe(TTS / f'{line_id}.mp3')
+            stats['transcribed_letters'] += len(letters(heard))
+            return line_id, heard, similarity(index[line_id]['text'], heard)
 
-            with ThreadPoolExecutor(args.jobs) as pool:
-                list(pool.map(check, ids))
-            index_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding='utf-8')
-            low = sorted((v['match'], k) for k, v in index.items() if 'match' in v and v['match'] < 0.7)
-            print(f'{len(low)} lines to listen to (the transcript differs from the text):')
-            for m, k in low:
-                print(f'  {m:.2f}  {k}  heard: {index[k]["heard"]}')
+        for attempt in range(3):
+            results = list(pool.map(check, ids))
+            redo = []
+            for line_id, heard, m in results:
+                index[line_id]['heard'], index[line_id]['match'] = heard, m
+                if m < 0.6:
+                    redo.append(line_id)
+            if not redo or attempt == 2:
+                break
+            print(f'  making {len(redo)} lines again (the words did not match): {", ".join(redo[:8])}')
+            await asyncio.gather(*(render(by_id[i], *settings(by_id[i])[:3]) for i in redo))
+            ids = redo
+        low = sorted((v['match'], k) for k, v in index.items() if 'match' in v and v['match'] < 0.7)
+        print(f'{len(low)} lines to listen to:')
+        for m, k in low:
+            print(f'  {m:.2f}  {k}  heard: {index[k]["heard"]}')
 
     index_path.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding='utf-8')
+    # gpt-4o-mini-tts: text input $0.60/1M tokens (about 3 characters per token) + audio output about $0.015 per minute
+    # (about 14 Hebrew characters per second). gpt-4o-transcribe: about $0.006 per minute.
+    minutes = stats['chars'] / 14 / 60
+    usd = minutes * 0.015 + (stats['chars'] + stats['instr_chars']) / 3 * 0.6e-6 + stats['transcribed_letters'] / 10 / 60 * 0.006
+    if stats['chars'] or stats['transcribed_letters']:
+        log_cost(f"tts {len(todo)} files, {stats['retries']} retries", usd)
+    print(f"estimated cost of this run: ${usd:.3f}")
     run_build()
 
 

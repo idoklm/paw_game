@@ -1,7 +1,7 @@
 // Shared UI helpers: elements, touch buttons, hold buttons, the captain radio, effects.
 
-import { captainSVG } from './art/captain.js';
 import { onSpeech } from './audio.js';
+import { sprite, pupImg, cheerImg } from './art/sprites.js';
 import { sfx } from './sfx.js';
 
 export const wait = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -65,29 +65,48 @@ export function iconButton(icon, cls = '') {
   return h(`<button class="icon-btn ${cls}" type="button">${icon}</button>`);
 }
 
-// The captain inside a round radio frame. It talks when a captain line plays.
+// The captain inside a round radio frame. It bounces while a captain line plays.
 export function captainRadio(parent, cls = '') {
-  const el = h(`<div class="radio ${cls}"><div class="radio-inner">${captainSVG({ noArm: true })}</div><div class="radio-antenna"></div></div>`);
+  const el = h(`<div class="radio ${cls}"><div class="radio-inner"><img class="cap-img" src="${sprite('captain')}" alt="" draggable="false"></div><div class="radio-antenna"></div></div>`);
   parent.append(el);
-  const svg = el.querySelector('.cap');
   const off = onSpeech((ev, phrase) => {
-    const talking = ev === 'start' && phrase && phrase.voice !== 'puppy';
-    svg.classList.toggle('is-talk', talking);
+    el.classList.toggle('talking', ev === 'start' && phrase && phrase.voice !== 'puppy');
   });
   return {
     el,
     show() { el.classList.add('show'); },
     hide() { el.classList.remove('show'); },
-    cheer(on) { svg.classList.toggle('is-cheer', on); },
+    cheer(on) { el.classList.toggle('cheer', on); },
     destroy() { off(); el.remove(); },
   };
 }
 
-// Makes a puppy svg talk while puppy lines play.
-export function bindPuppyTalk(svg) {
-  return onSpeech((ev, phrase) => {
-    svg.classList.toggle('is-talk', ev === 'start' && phrase && phrase.voice === 'puppy');
-  });
+// A puppy on screen: sitting pose, a jumping pose for joy, a bounce while it talks, a tilt for "oops".
+export function puppyActor(id, cls = '') {
+  const el = h(`<div class="actor ${cls}"><img class="actor-sit" src="${pupImg(id)}" alt="" draggable="false"><img class="actor-cheer" src="${cheerImg(id)}" alt="" draggable="false"></div>`);
+  let timer = null;
+  const set = (state, ms) => {
+    clearTimeout(timer);
+    el.classList.remove('is-cheer', 'is-oops');
+    void el.offsetWidth;
+    if (state) el.classList.add(state);
+    if (ms) timer = setTimeout(() => el.classList.remove(state), ms);
+  };
+  return {
+    el,
+    cheer(ms = 1300) { set('is-cheer', ms); },
+    cheerOn() { set('is-cheer'); },
+    oops() { set('is-oops', 700); },
+    rest() { set(null); },
+    bindTalk() {
+      return onSpeech((ev, phrase) => el.classList.toggle('is-talk', ev === 'start' && phrase && phrase.voice === 'puppy'));
+    },
+  };
+}
+
+// A square portrait of a puppy (the top of the sitting sprite), for cards and buttons.
+export function puppyFace(id, cls = '') {
+  return `<span class="face ${cls}"><img src="${pupImg(id)}" alt="" draggable="false"></span>`;
 }
 
 export function confetti(parent, { x = 640, y = 300, count = 60 } = {}) {
@@ -130,4 +149,12 @@ export function centerOf(el, stage) {
   const sr = stage.getBoundingClientRect();
   const scale = sr.width / 1280;
   return { x: (r.left + r.width / 2 - sr.left) / scale, y: (r.top + r.height / 2 - sr.top) / scale };
+}
+
+// Scene background: the picture fills the stage (1280 wide, centered vertically), and a blurred
+// copy fills the rest of a screen with another shape.
+export function sceneBg(url, top = -27) {
+  const back = document.getElementById('backdrop');
+  if (back) back.style.backgroundImage = `url("${url}")`;
+  return `<img class="scene-bg" src="${url}" alt="" draggable="false" style="top:${top}px">`;
 }

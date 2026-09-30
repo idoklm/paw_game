@@ -3,18 +3,19 @@
 // and keeps letters that look alike (ד/ר, ו/ז/ן, ב/כ, ה/ח/ת, ס/ם) in different stations.
 
 // id: ASCII key for audio files. name: letter name with niqqud (shown in subtitles).
-// say: spelling for the speech engine when it misreads `name` (checked with dev/spell_lab.py).
-// For example, the engine reads חֵית as "cheta", but reads חֵת as "chet".
+// say: spelling for the Microsoft and device voices when they misread `name` (they read חֵית as "cheta").
+// tts: spelling for the natural (OpenAI) voices. With a tsere they say "beit", "reish"; in kindergarten
+// the letter names are said without that "i": bet, khet, tet, resh.
 export const LETTERS = [
   { ch: 'א', id: 'alef', name: 'אָלֶף' },
-  { ch: 'ב', id: 'bet', name: 'בֵּית' },
+  { ch: 'ב', id: 'bet', name: 'בֵּית', tts: 'בֶּת' },
   { ch: 'ג', id: 'gimel', name: 'גִּימֶל' },
   { ch: 'ד', id: 'dalet', name: 'דָּלֶת' },
   { ch: 'ה', id: 'he', name: 'הֵא' },
   { ch: 'ו', id: 'vav', name: 'וָו' },
   { ch: 'ז', id: 'zayin', name: 'זַיִן' },
-  { ch: 'ח', id: 'het', name: 'חֵית', say: 'חֵת' },
-  { ch: 'ט', id: 'tet', name: 'טֵית' },
+  { ch: 'ח', id: 'het', name: 'חֵית', say: 'חֵת', tts: 'חֶת' },
+  { ch: 'ט', id: 'tet', name: 'טֵית', tts: 'טֶת' },
   { ch: 'י', id: 'yud', name: 'יוּד' },
   { ch: 'כ', id: 'kaf', name: 'כַּף' },
   { ch: 'ל', id: 'lamed', name: 'לָמֶד' },
@@ -25,7 +26,7 @@ export const LETTERS = [
   { ch: 'פ', id: 'pe', name: 'פֵּא' },
   { ch: 'צ', id: 'tsadi', name: 'צָדִי', say: 'צַדִּי' },
   { ch: 'ק', id: 'kuf', name: 'קוּף', say: 'קוּוף' },
-  { ch: 'ר', id: 'resh', name: 'רֵישׁ' },
+  { ch: 'ר', id: 'resh', name: 'רֵישׁ', tts: 'רֶשׁ' },
   { ch: 'ש', id: 'shin', name: 'שִׁין' },
   { ch: 'ת', id: 'tav', name: 'תָּו' },
   { ch: 'ך', id: 'kaf-final', name: 'כַּף סוֹפִית', base: 'כ' },
@@ -44,17 +45,20 @@ export function confusable(a, b) {
   return a !== b && CONFUSABLE_GROUPS.some((g) => g.includes(a) && g.includes(b));
 }
 
-// theme: background and item type for the mission.
+// theme: background and item type for the mission. games: the two mini-games on the first visit
+// (a replay picks two other games, so a station is not the same every time).
 export const STATIONS = [
-  { n: 1, letters: ['א', 'מ', 'ב'], theme: 'bridge' },
-  { n: 2, letters: ['ל', 'ש', 'ת'], theme: 'harbor' },
-  { n: 3, letters: ['ד', 'ו', 'ס'], theme: 'beach' },
-  { n: 4, letters: ['י', 'נ', 'פ'], theme: 'forest' },
-  { n: 5, letters: ['ר', 'ג', 'ע'], theme: 'farm' },
-  { n: 6, letters: ['ה', 'ק', 'ט'], theme: 'hill' },
-  { n: 7, letters: ['כ', 'צ', 'ז', 'ח'], theme: 'reef' },
-  { n: 8, letters: ['ך', 'ם', 'ן', 'ף', 'ץ'], theme: 'island' },
+  { n: 1, letters: ['א', 'מ', 'ב'], theme: 'bridge', games: ['find', 'catch'] },
+  { n: 2, letters: ['ל', 'ש', 'ת'], theme: 'harbor', games: ['sort', 'memory'] },
+  { n: 3, letters: ['ד', 'ו', 'ס'], theme: 'beach', games: ['paint', 'catch'] },
+  { n: 4, letters: ['י', 'נ', 'פ'], theme: 'forest', games: ['catch', 'memory'] },
+  { n: 5, letters: ['ר', 'ג', 'ע'], theme: 'farm', games: ['memory', 'sort'] },
+  { n: 6, letters: ['ה', 'ק', 'ט'], theme: 'hill', games: ['paint', 'catch'] },
+  { n: 7, letters: ['כ', 'צ', 'ז', 'ח'], theme: 'reef', games: ['sort', 'find'] },
+  { n: 8, letters: ['ך', 'ם', 'ן', 'ף', 'ץ'], theme: 'island', games: ['memory', 'paint'] },
 ];
+
+export const GAMES = ['find', 'catch', 'memory', 'sort', 'paint'];
 
 export const STATION = Object.fromEntries(STATIONS.map((s) => [s.n, s]));
 
@@ -63,8 +67,8 @@ export function lettersBefore(n) {
   return STATIONS.filter((s) => s.n < n).flatMap((s) => s.letters);
 }
 
-// Rounds per mission by age group.
+// Short missions: each mini-game has `goals` goals (a goal = one progress dot).
 export const PACE = {
-  '3-4': { rounds: 6, choices: 3, catchTargets: 3, catchItems: 6, catchSpeed: 34 },
-  '5-6': { rounds: 9, choices: 3, catchTargets: 4, catchItems: 8, catchSpeed: 52 },
+  '3-4': { goals: 3, choices: 3, pairs: 2, catchItems: 5, catchSpeed: 32, paintCover: 0.55, brush: 46 },
+  '5-6': { goals: 4, choices: 3, pairs: 3, catchItems: 7, catchSpeed: 46, paintCover: 0.7, brush: 38 },
 };

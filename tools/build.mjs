@@ -49,12 +49,15 @@ for (const [id, url] of Object.entries(files)) {
 }
 await writeFile(join(ROOT, 'audio', 'manifest.json'), JSON.stringify({ files, playback }, null, 1) + '\n');
 
-// The text column is what the speech engine reads (the `say` spelling), not always what subtitles show.
-const lines = Object.values(PHRASES).map((p) => `${p.id}\t${p.speaker}\t${p.say || p.text}${files[p.id] ? `\t[${files[p.id]}]` : ''}`);
-await writeFile(join(ROOT, 'audio', 'lines.txt'), '# line id <TAB> speaker <TAB> text for the speech engine <TAB> [file, if one exists]\n' + lines.join('\n') + '\n');
+// lines.txt is for people (line id, speaker, text). lines.json is for tools/tts.py.
+const lines = Object.values(PHRASES).map((p) => `${p.id}\t${p.speaker}\t${p.text}${files[p.id] ? `\t[${files[p.id]}]` : ''}`);
+await writeFile(join(ROOT, 'audio', 'lines.txt'), '# line id <TAB> speaker <TAB> text <TAB> [file, if one exists]\n' + lines.join('\n') + '\n');
+const lineData = Object.values(PHRASES).map(({ id, speaker, voice, text, say, tts }) => ({ id, speaker, voice, text, say, tts }));
+await writeFile(join(ROOT, 'audio', 'lines.json'), JSON.stringify(lineData, null, 1) + '\n');
 
 // Offline file list for the service worker. The version changes when any file changes.
-const include = ['index.html', 'manifest.webmanifest', 'css', 'js', 'icons', 'fonts', 'audio/manifest.json', ...Object.values(files)];
+// Art: only the small WebP files (assets/sprites, assets/bg), not the large source PNG files.
+const include = ['index.html', 'manifest.webmanifest', 'css', 'js', 'icons', 'fonts', 'assets/sprites', 'assets/bg', 'audio/manifest.json', ...Object.values(files)];
 const precache = [];
 for (const item of include) {
   const p = join(ROOT, item);

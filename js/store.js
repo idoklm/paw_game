@@ -1,7 +1,7 @@
 // Profiles, progress, and settings. Saved in localStorage on this device only.
 
 import { STATIONS, LETTER } from './curriculum.js';
-import { PUPPY } from './art/puppies.js';
+import { PUPPY } from './team.js';
 
 const KEY = 'lighthouse-team.v1';
 

@@ -1,0 +1,113 @@
+{
+ "model": "gpt-image-2.5-flare",
+ "style": "Art style: premium 2D animation for a high-budget preschool TV series. Clean confident dark-brown outlines of varying weight, soft cel shading with subtle gradients and a gentle rim light, rich warm saturated colors, big glossy expressive eyes with two catch-lights, appealing rounded shapes and strong silhouettes, joyful mood. Original character designs ready for animation. No text, no letters, no numbers, no watermark, no logos.",
+ "images": [
+  {
+   "name": "pups-sheet",
+   "size": "1536x1024",
+   "transparent": true,
+   "quality": "medium",
+   "refs": [
+    "ref-pilpel"
+   ],
+   "prompt": "A character lineup sheet on a fully transparent background: six different puppies of one original rescue team, in 2 rows of 3. Each puppy is full-body, sitting, facing the viewer, happy with an open-mouth smile, and has a soft contact shadow. Leave wide empty space between the puppies: they must not touch or overlap, and nothing may be cut off at the edges. The first puppy (Pilpel) must match the reference image exactly. 1) top-left: Pilpel, a corgi firefighter: ginger-orange fur with cream muzzle, chest and paws, big upright pointy ears, red firefighter helmet with a small gold shield with a flame, red rescue vest with yellow reflective stripes and a round white patch with a red flame. 2) top-middle: Dubi, a beagle police officer: tan, white and brown fur, long floppy brown ears, blue police cap with a gold star, blue vest with a round white patch with a gold star. 3) top-right: Anani, a fluffy white samoyed pilot girl: very fluffy white fur, small pointy ears, purple aviator cap with light-blue goggles pushed up on the forehead, purple vest with a round white patch with small wings, a white scarf. 4) bottom-left: Bloki, a black-and-white border collie builder: black fur with white face stripe, white muzzle, chest and paws, semi-folded ears, yellow hard hat, yellow vest with a silver reflective stripe and a round white patch with a hammer. 5) bottom-middle: Gali, a gray schnauzer lifeguard girl: silver-gray fur with bushy white eyebrows and a white beard, small folded ears, turquoise sporty cap, turquoise vest with a round white patch with an orange life ring, an orange whistle on a cord. 6) bottom-right: Lulu, an apricot poodle veterinarian girl: curly apricot fur with a curly topknot and curly ears, pink headband with a round silver doctor's head mirror, pink vest with a round white patch with a pink heart, a stethoscope around the neck."
+  },
+  {
+   "name": "pups-cheer",
+   "size": "1536x1024",
+   "transparent": true,
+   "quality": "medium",
+   "refs": [
+    "pups-sheet"
+   ],
+   "prompt": "The same six puppies as in the reference image, on a fully transparent background, in the same order and the same 2x3 layout, with the same outfits and colors. Now each puppy is jumping up with joy: all four paws off the ground, eyes squeezed shut with happiness, big open-mouth smile, ears flying. Leave wide empty space between the objects: they must not touch or overlap, and nothing may be cut off at the edges."
+  },
+  {
+   "name": "captain",
+   "size": "1024x1536",
+   "transparent": true,
+   "quality": "medium",
+   "refs": [
+    "pups-sheet"
+   ],
+   "prompt": "One original character, full body, standing, facing the viewer, on a fully transparent background, in the same art style as the reference image: Captain Ori, a cheerful 9-year-old boy who leads the puppy rescue team from a lighthouse. Curly dark-brown hair, light-brown skin with a few freckles, big brown eyes, a big friendly smile. White captain's hat with a navy band and a small gold lighthouse emblem, bright yellow raincoat with navy toggle buttons over a blue-and-white striped shirt, navy shorts, red rain boots. He waves hello with his right hand raised. Soft contact shadow under his feet."
+  },
+  {
+   "name": "vehicles",
+   "size": "1536x1024",
+   "transparent": true,
+   "quality": "medium",
+   "refs": [
+    "pups-sheet"
+   ],
+   "prompt": "Six cartoon rescue vehicles, on a fully transparent background, side view, all facing LEFT, in 2 rows of 3, in the same art style as the reference image. Each vehicle is driven by its puppy from the reference, whose head and shoulders show clearly in the open driver's seat: 1) top-left: a red fire truck with a ladder, driven by Pilpel the corgi. 2) top-middle: a blue police car with a light bar, driven by Dubi the beagle. 3) top-right: a purple helicopter, flown by Anani the white samoyed (in the cockpit). 4) bottom-left: a yellow bulldozer, driven by Bloki the border collie. 5) bottom-middle: a turquoise rescue boat with wheels (amphibious), driven by Gali the schnauzer. 6) bottom-right: a pink animal ambulance van with a heart, driven by Lulu the poodle. Chunky, rounded, toy-like proportions. Leave wide empty space between the objects: they must not touch or overlap, and nothing may be cut off at the edges."
+  },
+  {
+   "name": "items",
+   "size": "1024x1024",
+   "transparent": true,
+   "quality": "medium",
+   "prompt": "Nine separate game objects for a children's game, on a fully transparent background, in a 3x3 grid, cute cartoon style with clean dark-brown outlines. Each object is seen from the front and has a LARGE plain light-colored empty area in its middle, where a big letter will be printed later. Top row: a shiny round soap bubble; a wooden crate with a light panel; a pink seashell (scallop) with a pale center. Middle row: a red apple with a leaf and a pale center; a white egg; a round red balloon with a string and a pale center. Bottom row: a round orange fish facing left with a pale belly; a yellow five-pointed star with a pale center; a gold medal badge with a white center and a ribbon. No letters or numbers anywhere. Leave wide empty space between the objects: they must not touch or overlap, and nothing may be cut off at the edges."
+  },
+  {
+   "name": "bg-title",
+   "size": "1536x1024",
+   "quality": "medium",
+   "prompt": "A sunny seaside bay for a children's cartoon series: a tall red-and-white striped lighthouse on a rocky cape on the right, a calm turquoise sea with small waves and two little sailboats, a golden sandy beach across the bottom, a few palm trees, soft clouds in a light-blue sky. The upper middle is open sky (a title goes there). No characters, no text."
+  },
+  {
+   "name": "bg-map",
+   "size": "1536x1024",
+   "quality": "medium",
+   "prompt": "An illustrated top-down treasure-style map of a friendly bay for a children's game, no text, no characters, no vehicles. A turquoise sea fills the middle. Green land with sand beaches wraps around the bay on the left, bottom and right. A red-and-white lighthouse stands on a cape at the upper right. One clear winding sandy road starts at the lighthouse, runs down the right coast, along the bottom coast from right to left, up the left coast, and ends with a wooden bridge to a small palm island in the middle of the bay. Along the road, in order, eight landmarks: a wooden bridge over a river, a harbor with boats, a beach with a pink umbrella, a forest of round trees, a farm with a red barn, a green hill with a windmill, colorful coral rocks in shallow water, and the palm island. Next to each landmark the road has a round empty sandy clearing."
+  },
+  {
+   "name": "bg-bridge",
+   "size": "1536x1024",
+   "quality": "medium",
+   "prompt": "A wide landscape background for a children's game, side view, no characters, no text. Keep the middle of the picture calm and open (sky or water), because game objects will be placed there. A wooden arched bridge high over a calm river between two green grassy banks with round trees; blue sky with clouds; the river fills the lower middle."
+  },
+  {
+   "name": "bg-harbor",
+   "size": "1536x1024",
+   "quality": "medium",
+   "prompt": "A wide landscape background for a children's game, side view, no characters, no text. Keep the middle of the picture calm and open (sky or water), because game objects will be placed there. A cheerful harbor: a red cargo ship on calm water in the distance, a wooden pier across the bottom, a crane and stacked crates at the right edge, seagulls, blue sky."
+  },
+  {
+   "name": "bg-beach",
+   "size": "1536x1024",
+   "quality": "medium",
+   "prompt": "A wide landscape background for a children's game, side view, no characters, no text. Keep the middle of the picture calm and open (sky or water), because game objects will be placed there. A sunny beach: turquoise sea in the back, wide golden sand in the front half, a pink beach umbrella and palm trees at the edges, a sandcastle at the left edge."
+  },
+  {
+   "name": "bg-forest",
+   "size": "1536x1024",
+   "quality": "medium",
+   "prompt": "A wide landscape background for a children's game, side view, no characters, no text. Keep the middle of the picture calm and open (sky or water), because game objects will be placed there. A friendly sunny forest clearing: big round leafy trees at the left and right edges with apples, soft grass in front, sunbeams, a small path, flowers."
+  },
+  {
+   "name": "bg-farm",
+   "size": "1536x1024",
+   "quality": "medium",
+   "prompt": "A wide landscape background for a children's game, side view, no characters, no text. Keep the middle of the picture calm and open (sky or water), because game objects will be placed there. A farm: a red barn at the right edge, a wooden fence across the bottom, green hills and a hay bale, a chicken coop at the left edge, blue sky."
+  },
+  {
+   "name": "bg-hill",
+   "size": "1536x1024",
+   "quality": "medium",
+   "prompt": "A wide landscape background for a children's game, side view, no characters, no text. Keep the middle of the picture calm and open (sky or water), because game objects will be placed there. A windy green hilltop: a white windmill at the right edge, rolling green hills and flowers at the bottom, a big open blue sky with fluffy clouds and a few kites."
+  },
+  {
+   "name": "bg-reef",
+   "size": "1536x1024",
+   "quality": "medium",
+   "prompt": "A wide landscape background for a children's game, side view, no characters, no text. Keep the middle of the picture calm and open (sky or water), because game objects will be placed there. Underwater: a bright coral reef with colorful corals and seaweed at the bottom and edges, sunbeams through clear turquoise water, small bubbles, sandy sea floor."
+  },
+  {
+   "name": "bg-island",
+   "size": "1536x1024",
+   "quality": "medium",
+   "prompt": "A wide landscape background for a children's game, side view, no characters, no text. Keep the middle of the picture calm and open (sky or water), because game objects will be placed there. A small tropical island with palm trees and a little red-and-white lighthouse at the edges, calm sea, a warm evening sky with a few first stars."
+  }
+ ]
+}

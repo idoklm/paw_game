@@ -1,12 +1,12 @@
 // Parent area. Opens after a 3-second hold on the gear button and a math question.
 // Shows each child's progress, the start station, voice settings, and backup.
 
-import { ICONS } from '../art/scenes.js';
-import { PUPPIES, puppySVG } from '../art/puppies.js';
+import { ICONS } from '../art/icons.js';
+import { PUPPIES } from '../team.js';
 import { LETTERS, STATIONS, LETTER } from '../curriculum.js';
 import { say, voiceInfo, configureAudio } from '../audio.js';
 import { setSfx } from '../sfx.js';
-import { h, esc, onHold, iconButton } from '../ui.js';
+import { h, esc, onHold, iconButton, puppyFace } from '../ui.js';
 import {
   profiles, getProfile, updateProfile, deleteProfile, resetProgress, settings, setSetting,
   letterStatus, exportData, importData, unlockedUpTo,
@@ -105,7 +105,7 @@ ${[0.8, 0.9, 1, 1.1, 1.2].map((r) => `<option value="${r}" ${Number(s.rate) === 
 <label for="pstart">תחנת פתיחה (תחנות קודמות נפתחות, בלי תגים)</label>
 <select id="pstart" data-start>${STATIONS.map((st) => `<option value="${st.n}" ${Number(p.startStation) === st.n ? 'selected' : ''}>תחנה ${st.n}: ${st.letters.join(' ')}</option>`).join('')}</select>
 </div>
-<div><label>כלבלב</label><div style="display:flex;gap:8px;flex-wrap:wrap;max-width:420px">${PUPPIES.map((x) => `<button type="button" data-pup="${x.id}" style="width:120px;height:120px;border-radius:24px;border:4px solid ${x.id === p.puppy ? '#2B2340' : '#DDE2EC'};background:${x.id === p.puppy ? '#FFF3B8' : '#fff'};padding:4px;cursor:pointer">${puppySVG(x.id, { headOnly: true })}</button>`).join('')}</div></div>
+<div><label>כלבלב</label><div style="display:flex;gap:8px;flex-wrap:wrap;max-width:420px">${PUPPIES.map((x) => `<button type="button" data-pup="${x.id}" style="width:120px;height:120px;border-radius:24px;border:4px solid ${x.id === p.puppy ? '#2B2340' : '#DDE2EC'};background:${x.id === p.puppy ? '#FFF3B8' : '#fff'};padding:4px;cursor:pointer">${puppyFace(x.id)}</button>`).join('')}</div></div>
 </div>
 <p>תחנות שהושלמו: <b>${done} מתוך ${STATIONS.length}</b>. תחנה פתוחה אחרונה: <b>${unlockedUpTo(p)}</b>. תגים: <b>${p.badges.length}</b>.</p>
 <div class="legend"><span><i style="background:#D9F5CF"></i>יודע/ת: 4 מתוך 5 הניסיונות האחרונים נכונים בפעם הראשונה</span><span><i style="background:#FFF1C2"></i>לומד/ת</span><span><i style="background:#F1F3F7"></i>עוד לא תרגל/ה</span></div>

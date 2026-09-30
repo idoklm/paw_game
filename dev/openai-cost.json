@@ -1,0 +1,297 @@
+{
+ "entries": [
+  {
+   "what": "image pups-sheet",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 1559,
+    "input_tokens_details": {
+     "image_tokens": 1024,
+     "text_tokens": 535
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 1902
+   },
+   "usd_estimate": 0.0266
+  },
+  {
+   "what": "image bg-title",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 168,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 168
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 511
+   },
+   "usd_estimate": 0.0146
+  },
+  {
+   "what": "image items",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 282,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 282
+    },
+    "output_tokens": 439,
+    "output_tokens_details": {
+     "image_tokens": 439,
+     "text_tokens": 0
+    },
+    "total_tokens": 721
+   },
+   "usd_estimate": 0.019
+  },
+  {
+   "what": "image pups-cheer",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 1728,
+    "input_tokens_details": {
+     "image_tokens": 1536,
+     "text_tokens": 192
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 2071
+   },
+   "usd_estimate": 0.03
+  },
+  {
+   "what": "image captain",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 1765,
+    "input_tokens_details": {
+     "image_tokens": 1536,
+     "text_tokens": 229
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 2108
+   },
+   "usd_estimate": 0.0302
+  },
+  {
+   "what": "image vehicles",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 1869,
+    "input_tokens_details": {
+     "image_tokens": 1536,
+     "text_tokens": 333
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 2212
+   },
+   "usd_estimate": 0.0307
+  },
+  {
+   "what": "image bg-map",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 277,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 277
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 620
+   },
+   "usd_estimate": 0.0151
+  },
+  {
+   "what": "image bg-bridge",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 162,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 162
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 505
+   },
+   "usd_estimate": 0.0145
+  },
+  {
+   "what": "image bg-beach",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 168,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 168
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 511
+   },
+   "usd_estimate": 0.0146
+  },
+  {
+   "what": "image bg-forest",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 165,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 165
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 508
+   },
+   "usd_estimate": 0.0145
+  },
+  {
+   "what": "image bg-hill",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 169,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 169
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 512
+   },
+   "usd_estimate": 0.0146
+  },
+  {
+   "what": "image bg-farm",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 167,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 167
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 510
+   },
+   "usd_estimate": 0.0146
+  },
+  {
+   "what": "image bg-reef",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 166,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 166
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 509
+   },
+   "usd_estimate": 0.0146
+  },
+  {
+   "what": "image bg-island",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 162,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 162
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 505
+   },
+   "usd_estimate": 0.0145
+  },
+  {
+   "what": "image bg-harbor",
+   "model": "gpt-image-2.5-flare",
+   "usage": {
+    "input_tokens": 170,
+    "input_tokens_details": {
+     "image_tokens": 0,
+     "text_tokens": 170
+    },
+    "output_tokens": 343,
+    "output_tokens_details": {
+     "image_tokens": 343,
+     "text_tokens": 0
+    },
+    "total_tokens": 513
+   },
+   "usd_estimate": 0.0146
+  },
+  {
+   "what": "tts 264 files, 0 retries",
+   "usd_estimate": 0.31,
+   "note": "corrected: the first formula counted instruction text as audio"
+  },
+  {
+   "what": "tts fix 6 lines",
+   "usd_estimate": 0.0104
+  },
+  {
+   "what": "letter-name stress check (gpt-audio-1.5, 27 short clips)",
+   "usd_estimate": 0.08
+  },
+  {
+   "what": "tts 264 files, 3 retries",
+   "usd_estimate": 0.2863
+  },
+  {
+   "what": "check 5 letter names x2 (gpt-audio-1.5)",
+   "usd_estimate": 0.015
+  }
+ ],
+ "images_total_usd_estimate": 0.2827,
+ "total_logged_usd_estimate": 0.9844
+}

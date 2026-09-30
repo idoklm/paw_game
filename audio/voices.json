@@ -1,21 +1,20 @@
 {
   "_comment": [
     "Voice settings per speaker, used by tools/tts.py. A speaker is 'captain' or a puppy id.",
-    "provider: edge (Microsoft voices, free) or openai (needs OPENAI_API_KEY).",
-    "Child voices: the file is made slower and at a changed pitch, and the game plays it faster by 'playback'",
-    "with the pitch not preserved. This raises the pitch and the timbre together, like a child's voice.",
-    "pace: the final speed after the speed-up (1 = normal). Values chosen by measuring pitch and an audio-model age estimate (dev/voice_lab.py)."
+    "provider openai: natural voices with acting instructions and the rules in audio/pronunciation.txt.",
+    "provider edge: Microsoft voices (free). Optional 'playback' plays the file faster (not used now: it sounded distorted).",
+    "Chosen by the parent on 2026-09-30: ballad for the captain, and a different voice for each puppy."
   ],
-  "captain": { "provider": "edge", "voice": "he-IL-HilaNeural", "pitch": "+20Hz", "pace": 0.95, "playback": 1.27 },
-  "pilpel":  { "provider": "edge", "voice": "he-IL-HilaNeural", "pitch": "+20Hz", "pace": 1.0,  "playback": 1.28 },
-  "dubi":    { "provider": "edge", "voice": "he-IL-HilaNeural", "pitch": "+0Hz",  "pace": 1.0,  "playback": 1.27 },
-  "anani":   { "provider": "edge", "voice": "he-IL-HilaNeural", "pitch": "+30Hz", "pace": 0.97, "playback": 1.30 },
-  "bloki":   { "provider": "edge", "voice": "he-IL-HilaNeural", "pitch": "+5Hz",  "pace": 0.95, "playback": 1.27 },
-  "gali":    { "provider": "edge", "voice": "he-IL-HilaNeural", "pitch": "+25Hz", "pace": 1.1,  "playback": 1.28 },
-  "lulu":    { "provider": "edge", "voice": "he-IL-HilaNeural", "pitch": "+40Hz", "pace": 0.98, "playback": 1.30 },
-  "puppy":   { "provider": "edge", "voice": "he-IL-HilaNeural", "pitch": "+25Hz", "pace": 1.0,  "playback": 1.28 },
-  "openai_instructions": {
-    "captain": "Voice: a real 9-year-old Israeli boy, bright and full of energy, like the dubbed voice of a kid hero in an animated TV show for young children. Speak Hebrew with a native Israeli accent. Speak slowly and clearly. Read exactly the given text. The niqqud shows the correct pronunciation.",
-    "puppy": "Voice: a real 6-year-old Israeli child playing a cute cartoon puppy: bouncy, excited and happy. Speak Hebrew with a native Israeli accent. Speak slowly. Read exactly the given text. The niqqud shows the correct pronunciation."
+  "captain": { "provider": "openai", "voice": "ballad", "role": "captain" },
+  "pilpel":  { "provider": "openai", "voice": "verse", "role": "puppy", "style": "An energetic, brave little boy puppy." },
+  "dubi":    { "provider": "openai", "voice": "alloy", "role": "puppy", "style": "A calm, friendly, polite little boy puppy." },
+  "anani":   { "provider": "openai", "voice": "shimmer", "role": "puppy", "style": "A dreamy, cheerful little girl puppy who loves flying." },
+  "bloki":   { "provider": "openai", "voice": "echo", "role": "puppy", "style": "A sturdy, happy little boy puppy who loves building." },
+  "gali":    { "provider": "openai", "voice": "coral", "role": "puppy", "style": "A sporty, bubbly little girl puppy who loves the sea." },
+  "lulu":    { "provider": "openai", "voice": "marin", "role": "puppy", "style": "A sweet, caring little girl puppy." },
+  "puppy":   { "provider": "openai", "voice": "coral", "role": "puppy" },
+  "roles": {
+    "captain": "You are the voice of Captain Ori, a cheerful 9-year-old boy, the hero of a Hebrew preschool cartoon series. Perform like a professional voice actor: warm, bright, youthful and playful, natural and human, never robotic. Speak native Israeli Hebrew, clearly and a little slowly, for children aged 3 to 6. Read exactly the given text: do not add, skip or repeat any word.",
+    "puppy": "You are a cute puppy character in a Hebrew preschool cartoon series. Perform like a professional voice actor: very young, excited, bouncy and happy, natural and human. Speak native Israeli Hebrew. Read exactly the given text: do not add, skip or repeat any word."
   }
 }

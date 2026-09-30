@@ -185,8 +185,10 @@ export async function say(id, { token } = {}) {
   const url = phrase.id && state.files[phrase.id];
   if (url) ok = await playFile(url, t, state.playback[phrase.id] || 1);
   if (ok === null && t === state.token) ok = await speak(phrase.say || phrase.text, phrase.voice, t);
-  if (t === state.token) showSubtitle('');
-  emit('end', phrase);
+  if (t === state.token) {
+    showSubtitle('');
+    emit('end', phrase);
+  }
   return Boolean(ok) && t === state.token;
 }
 

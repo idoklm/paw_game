@@ -1,0 +1,92 @@
+{
+ "pups-sheet": {
+  "hash": "c1dc1e5c0319",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": true
+ },
+ "pups-cheer": {
+  "hash": "4339a3c24ea7",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": true
+ },
+ "captain": {
+  "hash": "7d70f6a84337",
+  "model": "gpt-image-2.5-flare",
+  "size": "1024x1536",
+  "transparent": true
+ },
+ "vehicles": {
+  "hash": "e38d4242e356",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": true
+ },
+ "items": {
+  "hash": "674255a0713c",
+  "model": "gpt-image-2.5-flare",
+  "size": "1024x1024",
+  "transparent": true
+ },
+ "bg-title": {
+  "hash": "b9982b7508d0",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": false
+ },
+ "bg-map": {
+  "hash": "4357306c4fff",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": false
+ },
+ "bg-bridge": {
+  "hash": "8ec4474910b6",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": false
+ },
+ "bg-harbor": {
+  "hash": "72f383f14242",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": false
+ },
+ "bg-beach": {
+  "hash": "a8e55af9e352",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": false
+ },
+ "bg-forest": {
+  "hash": "b58e64937777",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": false
+ },
+ "bg-farm": {
+  "hash": "2790152a59ea",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": false
+ },
+ "bg-hill": {
+  "hash": "843d33ab38f6",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": false
+ },
+ "bg-reef": {
+  "hash": "344121d93699",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": false
+ },
+ "bg-island": {
+  "hash": "44cbb0037a4f",
+  "model": "gpt-image-2.5-flare",
+  "size": "1536x1024",
+  "transparent": false
+ }
+}

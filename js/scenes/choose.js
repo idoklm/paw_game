@@ -1,15 +1,16 @@
 // Choose a puppy. A tap introduces the puppy; the green button under it confirms.
 // Then a short parent step: the child's name (optional) and age group.
 
-import { bayPanorama, ICONS } from '../art/scenes.js';
-import { PUPPIES, puppySVG } from '../art/puppies.js';
+import { ICONS } from '../art/icons.js';
+import { bg } from '../art/sprites.js';
+import { PUPPIES } from '../team.js';
 import { say, sayAll, stopSpeech } from '../audio.js';
 import { sfx } from '../sfx.js';
-import { h, onTap, captainRadio, bindPuppyTalk, confetti, iconButton } from '../ui.js';
+import { h, onTap, captainRadio, confetti, iconButton, sceneBg, puppyActor } from '../ui.js';
 import { createProfile, profiles } from '../store.js';
 
 export async function show(root, params, ctx, go) {
-  root.innerHTML = bayPanorama();
+  root.innerHTML = sceneBg(bg('bg-title'));
   const radio = captainRadio(root, 'left');
   ctx.onLeave(() => radio.destroy());
 
@@ -23,14 +24,15 @@ export async function show(root, params, ctx, go) {
   root.append(line);
   let chosen = null;
   const slots = PUPPIES.map((p, i) => {
-    const slot = h(`<div class="slot" role="button" aria-label="${p.name}"><div class="pedestal"></div>${puppySVG(p.id)}
+    const slot = h(`<div class="slot" role="button" aria-label="${p.name}"><div class="pedestal" style="--c:${p.color}"></div>
 <button class="big-btn ok" type="button" aria-label="בחירה">${ICONS.check}</button></div>`);
+    const actor = puppyActor(p.id, 'enter');
+    actor.el.style.animationDelay = `${0.1 + i * 0.08}s`;
+    slot.prepend(actor.el);
     slot.style.left = `${(PUPPIES.length - 1 - i) * 206}px`; // first puppy on the right (Hebrew reads right to left)
-    const svg = slot.querySelector('.pup');
-    svg.querySelector('.pup-head').style.animationDelay = `${-i * 1.1}s`;
-    ctx.onLeave(bindPuppyTalk(svg));
+    ctx.onLeave(actor.bindTalk());
     line.append(slot);
-    return { p, slot, svg };
+    return { p, slot, actor };
   });
 
   const select = async (s) => {
@@ -38,9 +40,8 @@ export async function show(root, params, ctx, go) {
     for (const o of slots) {
       o.slot.classList.toggle('chosen', o === s);
       o.slot.classList.toggle('dim', o !== s);
-      o.svg.classList.toggle('is-cheer', o === s);
     }
-    setTimeout(() => s.svg.classList.remove('is-cheer'), 1400);
+    s.actor.cheer(1200);
     const ok = await sayAll([`pup.${s.p.id}`]);
     if (ok && chosen === s) await say('chooseOk');
   };
@@ -53,9 +54,9 @@ export async function show(root, params, ctx, go) {
     onTap(s.slot.querySelector('.ok'), () => {
       if (chosen !== s) return;
       sfx('fanfare');
-      confetti(root, { x: parseFloat(s.slot.style.left) + 120, y: 360 });
+      confetti(root, { x: parseFloat(s.slot.style.left) + 100, y: 360 });
       stopSpeech();
-      parentStep(root, s.p, go, ctx);
+      parentStep(root, s.p, go);
     }, { sound: null });
   }
 
@@ -63,7 +64,7 @@ export async function show(root, params, ctx, go) {
   await say('choose');
 }
 
-function parentStep(root, puppy, go, ctx) {
+function parentStep(root, puppy, go) {
   const wrap = h(`<div class="sheet-wrap"><div class="sheet">
 <h2>ילד/ה חדש/ה בצוות</h2>
 <p>את המסך הזה ממלא מבוגר. השם מופיע רק על הכרטיס, כדי להבדיל בין הילדים.</p>
@@ -71,7 +72,7 @@ function parentStep(root, puppy, go, ctx) {
 <input id="kid-name" type="text" maxlength="14" autocomplete="off">
 <label>גיל</label>
 <div class="seg"><button type="button" data-age="3-4">3 עד 4</button><button type="button" data-age="5-6" class="on">5 עד 6</button></div>
-<p class="muted">בגיל 3 עד 4 המשימות קצרות יותר, והבועות זזות לאט.</p>
+<p class="muted">בגיל 3 עד 4 המשחקים קצרים יותר, והפריטים זזים לאט.</p>
 <div class="row-actions"><button class="pill go" type="button" data-go>יוצאים לדרך</button><button class="pill" type="button" data-cancel>ביטול</button></div>
 </div></div>`);
   root.append(wrap);

@@ -1,69 +1,45 @@
-/* Character animation. Transform origins are in viewBox units (SVG default transform-box: view-box). */
+/* Motion for the generated art: puppy actors, the captain radio, vehicles, items. */
 
-.pup, .cap, .veh { overflow: visible; display: block; }
-.pup .eye-closed, .pup .mouth-closed,
-.cap .eye-closed, .cap .mouth-closed { display: none; }
+img { -webkit-user-drag: none; user-select: none; }
 
-/* expressions */
-.is-cheer .eye-open { display: none; }
-.is-cheer .eye-closed { display: inline; }
-.is-talk .mouth-open { animation: talk-open .34s steps(1) infinite; }
-.is-talk .mouth-closed { display: inline; animation: talk-closed .34s steps(1) infinite; }
-@keyframes talk-open { 0% { opacity: 1; } 50% { opacity: 0; } }
-@keyframes talk-closed { 0% { opacity: 0; } 50% { opacity: 1; } }
+/* ---------- puppy actor ---------- */
+.actor { position: absolute; pointer-events: none; }
+.actor img { position: absolute; left: 0; bottom: 0; width: 100%; height: auto; transform-origin: 50% 100%; }
+.actor .actor-cheer { opacity: 0; }
+.actor .actor-sit { animation: breathe 3.2s ease-in-out infinite; }
+@keyframes breathe { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.015, .985); } }
 
-/* puppy idle motion */
-.pup-tail { transform-origin: 262px 400px; animation: pup-wag .45s ease-in-out infinite alternate; }
-@keyframes pup-wag { from { transform: rotate(-8deg); } to { transform: rotate(10deg); } }
-
-.pup-eyes, .cap-eyes { animation: blink 5.2s infinite; }
-.pup-eyes { transform-origin: 200px 146px; }
-@keyframes blink { 0%, 93%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.08); } }
-
-.pup-head { transform-origin: 200px 244px; animation: pup-tilt 7s ease-in-out infinite; }
-@keyframes pup-tilt {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-4deg); }
-  55% { transform: rotate(3deg); }
-  75% { transform: rotate(0deg); }
-}
-.pup-ear-l, .pup-ear-r { transform-origin: 128px 98px; }
-.pup-ear-l { animation: pup-ear 3.7s ease-in-out infinite; }
-.pup-ear-r { animation: pup-ear 4.3s ease-in-out infinite .6s; }
-@keyframes pup-ear { 0%, 80%, 100% { transform: rotate(0deg); } 86% { transform: rotate(-9deg); } 92% { transform: rotate(4deg); } }
-
-.pup-root { transform-origin: 200px 430px; animation: breathe 3s ease-in-out infinite; }
-@keyframes breathe { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.012, .99); } }
-
-.is-cheer .pup-root { animation: hop .55s cubic-bezier(.3, .7, .4, 1) infinite; }
-.is-cheer .pup-tail { animation-duration: .18s; }
+.actor.is-cheer .actor-sit { opacity: 0; }
+.actor.is-cheer .actor-cheer { opacity: 1; animation: hop .6s cubic-bezier(.3, .7, .4, 1) infinite; }
 @keyframes hop {
-  0%, 100% { transform: translateY(0) scale(1.03, .96); }
-  45% { transform: translateY(-34px) scale(.97, 1.04); }
+  0%, 100% { transform: translateY(0) scale(1.04, .95); }
+  45% { transform: translateY(-9%) scale(.97, 1.04); }
 }
+.actor.is-talk .actor-sit { animation: talk .32s ease-in-out infinite alternate; }
+@keyframes talk { from { transform: translateY(0) rotate(-1deg); } to { transform: translateY(-2.5%) rotate(1.5deg) scale(1.01); } }
+.actor.is-oops .actor-sit { animation: oops .7s ease-in-out; }
+@keyframes oops { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-7deg) translateX(-2%); } 55% { transform: rotate(5deg); } 80% { transform: rotate(-2deg); } }
 
-.is-sad .pup-head { animation: none; transform: rotate(-6deg); }
-.is-sad .pup-tail { animation-duration: 1.6s; }
+/* entrance: slide up from below with a bounce */
+.actor.enter { animation: actor-in .7s cubic-bezier(.3, 1.4, .5, 1) backwards; }
+@keyframes actor-in { from { transform: translateY(60%) scale(.8); opacity: 0; } }
 
-/* captain */
-.cap-eyes { transform-origin: 150px 150px; }
-.cap-head { transform-origin: 150px 230px; animation: cap-tilt 8s ease-in-out infinite; }
-@keyframes cap-tilt { 0%, 100% { transform: rotate(0deg); } 40% { transform: rotate(2.5deg); } 70% { transform: rotate(-2deg); } }
-.cap-arm { transform-origin: 236px 300px; transform: rotate(0deg); }
-.is-wave .cap-arm { animation: cap-wave .9s ease-in-out infinite alternate; }
-@keyframes cap-wave { from { transform: rotate(-10deg); } to { transform: rotate(12deg); } }
+/* ---------- captain radio ---------- */
+.cap-img { position: absolute; left: 50%; top: 6%; width: 118%; transform: translateX(-50%); transform-origin: 50% 20%; }
+.radio.talking .cap-img { animation: cap-talk .3s ease-in-out infinite alternate; }
+@keyframes cap-talk { from { transform: translateX(-50%) rotate(-1.5deg); } to { transform: translateX(-50%) translateY(-2%) rotate(1.5deg); } }
+.radio.cheer .cap-img { animation: cap-cheer .5s ease-in-out infinite alternate; }
+@keyframes cap-cheer { from { transform: translateX(-50%) translateY(0); } to { transform: translateX(-50%) translateY(-6%); } }
 
-/* vehicles */
-.veh-rotor { transform-origin: 180px 36px; animation: rotor .18s linear infinite alternate; }
-@keyframes rotor { from { transform: scaleX(1); } to { transform: scaleX(-1); } }
-.veh-siren { animation: siren .6s steps(1) infinite; }
-@keyframes siren { 50% { opacity: .35; } }
-.is-driving .veh-body { animation: bump .32s ease-in-out infinite alternate; }
-@keyframes bump { from { transform: translateY(0); } to { transform: translateY(-4px); } }
-.veh-wheel { transform-box: fill-box; transform-origin: center; }
-.is-driving .veh-wheel { animation: spin .5s linear infinite; }
-@keyframes spin { to { transform: rotate(-360deg); } }
+/* ---------- vehicles ---------- */
+.veh-img { display: block; width: 100%; height: auto; transform-origin: 50% 90%; }
+.is-driving .veh-img { animation: bump .3s ease-in-out infinite alternate; }
+@keyframes bump { from { transform: translateY(0) rotate(-.6deg); } to { transform: translateY(-3%) rotate(.6deg); } }
+
+/* ---------- face portrait ---------- */
+.face { display: block; position: relative; overflow: hidden; border-radius: 50%; aspect-ratio: 1; }
+.face img { position: absolute; left: 50%; top: 2%; width: 118%; transform: translateX(-50%); }
 
 @media (prefers-reduced-motion: reduce) {
-  .pup *, .cap *, .veh * { animation-duration: 0s !important; animation-iteration-count: 1 !important; }
+  .actor *, .cap-img, .veh-img { animation-duration: 0s !important; animation-iteration-count: 1 !important; }
 }
